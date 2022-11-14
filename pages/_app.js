@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 import { Provider } from 'react-redux';
 
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 
 import store from 'src/redux/store';
 
@@ -24,8 +24,7 @@ function MyApp({ Component, pageProps }) {
                 <title>{appName}</title>
                 <meta name="description" content={appConfig.description} />
             </Head>
-
-            <ToastContainer />
+            
 
             <Provider store={store}>
                 <Script src={`https://kit.fontawesome.com/${FONT_AWESOME_KEY}.js`} />
