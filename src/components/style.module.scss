@@ -29,14 +29,10 @@
 
 .cardContainer {
     display: flex;
-    // flex-direction: column;
-    // background-color: #fff;
-    width: fit-content;
-    margin: 0 auto;
     border-radius: 40px;
-    border: 0.1px solid white;
-    gap: 150px;
-
+    background-color: #fff;
+    margin: 15rem auto;
+    width: 25%;
 }
 
 .cardTitle {
@@ -52,15 +48,18 @@
     font-weight: 300;
 }
 
-.cardBox1, .cardBox2, .cardBox3 {
+.cardBox {
+    display: flex;
+    // align-items: center;
+    // justify-content:center;
     box-shadow: 8px 10px 20px -10px rgba(128,128,128,0.75);
-    padding: 5rem;
     border-radius: 40px;
     height: 45vh;
     font-size: 20px;
 }
 
-.cardBox1:hover, .cardBox2:hover, .cardBox3:hover {
+
+.cardBox:hover {
     background: linear-gradient(90deg,rgba(7, 1, 129, 0.8) 8%, rgba(0, 255, 255, 0.8) 66%,);
     
 }
@@ -104,9 +103,9 @@
     width: 100rem;
 }
 
-.footerimgcontainer {
-   z-index: 1;
-}
+// .footerimgcontainer {
+//    z-index: 1;
+// }
 
 
 // #ff00ff for the fuchsia 
