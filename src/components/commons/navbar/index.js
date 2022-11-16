@@ -21,7 +21,7 @@ const Navbar = () => {
                             Services
                         </a>
                     </Link>
-                    <Link className={navLink} href="about">
+                    <Link className={navLink} href="contact">
                         <a href="about" className={navLink}>
                             Contact us
                         </a>
