@@ -15,7 +15,7 @@ const Home = () => {
     const { ourServices, servicesTitle, OurServicesDescription } = ComponentStyle; // Services-Home-Section
 
     return (
-        <div className="pageContainer">
+        <div className="pageContainer"> 
             <div className={bg}>
                 <Navbar />
                 <div className={content}>

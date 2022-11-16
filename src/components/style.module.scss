@@ -85,6 +85,34 @@
 
 // Card Responsive //
 
+@media all and (max-width: 460px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80vw;
+        height: 35vh;
+    }
+
+    .cardContent {
+        padding: 2rem;
+    }
+
+    .cardTitle {
+        margin: 3rem 0;
+    }
+
+    .cardDescription {
+        margin: -1rem auto;
+    }
+
+    //     // .cardContent {
+    //     //     margin: 1rem 0;
+    //     // }
+}
+
 @media all and (max-width: 600px) {
     .cardContainer {
         display: flex;
