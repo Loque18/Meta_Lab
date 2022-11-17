@@ -1,5 +1,5 @@
 .contactContainer {
-    background: linear-gradient(90deg, rgba(0,8,147,1) 0%, rgba(0,255,255,1) 87%);
+    background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 255, 1) 87%);
     // padding: 12rem;
     height: 100vh;
 }
@@ -40,14 +40,17 @@
 
 .inputContainer {
     margin: 0 2rem;
-    padding: auto 1rem ;
+    padding: auto 1rem;
 }
 
 .Input {
     margin: 1rem auto;
     padding: 1rem 1rem;
     border: 0;
-    border-bottom: 1px solid rgba(0,8,147,1);
-    
+    border-bottom: 1px solid rgba(0, 8, 147, 1);
     outline: none;
+}
+
+.imgBox {
+    display: flex;
 }

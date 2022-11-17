@@ -1,19 +1,33 @@
 import Image from "next/image";
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
-import { config } from "@fortawesome/fontawesome-svg-core";
-// import {faFacebook} from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-config.autoAddCss = false;
+import FooterStyle from 'src/components/style.module.scss'
+import iconImg from "../Icons/icons";
 
 const Footer = () => {
+    const { FooterContainer, FooterContent, FooterIcons, logoBox, logoFooter, socialIcons, mailContainer, mailImg, mailText, ImgIcon, CopyRights } = FooterStyle;
     return (
-        <footer className="footerContainer">
-            <Image src="/Media/Logo-white.png" width={320} height={70} />
-            <div className="icons">
-                {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                <h1>hehe</h1>
+        <footer className={FooterContainer}>
+            <div className={FooterContent}>
+                <div className={logoBox}>
+                    <Image src="/Media/Logo-black.png" className={logoFooter} width={320} height={85} />
+                </div>
+                <div className={FooterIcons}>
+                    {
+                        iconImg.map((icons) => {
+                            return (
+                                <div className={socialIcons} key={icons.id}>
+                                    <img src={icons.img} className={ImgIcon} alt="icons.png" />
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
+                <div className={mailContainer}>
+                    <img src="/Media/Mail.png" className={mailImg} alt="" />
+                    <h1 className={mailText}>Get in touch with us</h1>
+                </div>
             </div>
+            <h1 className={CopyRights}>© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
         </footer>
     );
 };

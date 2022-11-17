@@ -2,7 +2,7 @@ import style from 'pages/contact.module.scss'
 import Navbar from 'src/components/commons/navbar';
 
 const ContactUs = () => {
-  const { contactContainer, contactDescription, contactTitle, contactText, contactForm, inputContainer, Input } = style;
+  const { contactContainer, contactDescription, contactTitle, contactText, contactForm, inputContainer, Input, imageBox, desktopImg } = style;
   return (
     <div className={contactContainer}>
       <Navbar />
@@ -13,7 +13,9 @@ const ContactUs = () => {
           back to you as soon as we can !
         </h2>
       </div>
-
+      <div className={imageBox}>
+        <img src='/Media/desktopIcon.png' className={desktopImg} alt="" />
+      </div>
       <form className={contactForm}>
         <div className={inputContainer}>
           <input type="text" className={Input} name="Name" placeholder='Name' id="" />

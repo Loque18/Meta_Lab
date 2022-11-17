@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
+        "aboutsection",
         "Splide"
     ],
-    "discord.enabled": false
+    "discord.enabled": true
 }

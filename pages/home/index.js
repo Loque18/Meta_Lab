@@ -1,21 +1,21 @@
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import Navbar from 'src/components/commons/navbar';
-// import metaFooter from '@/components/AboutMeta';
-
 import Cards from 'src/components/commons/cards/Cards';
 import ComponentStyle from 'src/components/style.module.scss';
-// import Carousel from 'src/components/commons/Carousel/Carousel';
-// import Footer from 'src/components/commons/footer';
+import Link from 'next/link';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
+
 import styles from './home.module.scss';
 
 const Home = () => {
     const { bg, multipleColor, content, title, description, btnMain } = styles; // home Scss
-    const { cardContainer, card, cardTitle, cardDescription, cardContent } = ComponentStyle; // cards Scss
+    const { cardContainer, card, cardTitle, cardDescription, cardContent, cardImg, imgBox } = ComponentStyle; // cards Scss
     const { footerContainer, footerTitle, footerDescription, footerImgcontainer, imgSize } = ComponentStyle;
     const { ourServices, servicesTitle, OurServicesDescription } = ComponentStyle; // Services-Home-Section
 
     return (
-        <div className="pageContainer"> 
+        <div className="pageContainer">
             <div className={bg}>
                 <Navbar />
                 <div className={content}>
@@ -31,9 +31,11 @@ const Home = () => {
                         transition from web2 to web3 is seamless and help you achieve your <br />
                         strategy and long term goals.
                     </p>
-                    <button type="button" className={btnMain}>
-                        Our Services
-                    </button>
+                    <Link href="#ourServices">
+                        <button type="button" className={btnMain}>
+                            Our Services
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Card Section */}
@@ -42,6 +44,9 @@ const Home = () => {
                         return (
                             <div className={card} key={cards.id}>
                                 <div className={cardContent}>
+                                    <div className={imgBox}>
+                                        <img src={cards.img} alt="" className={cardImg} />
+                                    </div>
                                     <span className={cardTitle}>{cards.title}</span>
                                     <p className={cardDescription}>{cards.cardDescription}</p>
                                 </div>
@@ -74,7 +79,7 @@ const Home = () => {
                 </div>
 
                 {/* Services */}
-                <div className={ourServices}>
+                <div className={ourServices} id="ourServices">
                     <h1 className={servicesTitle}>Our Services</h1>
                     <h2 className={OurServicesDescription}>
                         We offer the full spectrum of services to help you move <br /> into the web3 space seamlessly
