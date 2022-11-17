@@ -8,13 +8,13 @@ import styles from 'src/components/style.module.scss'
 const Navbar = () => {
 
     const { navbar, navbarMenu, navLink } = styles;
-    const [color, setColor] = useState("black");
-    const [img, setImg] = useState("/Media/Logo-black.png");
+    const [Color, setColor] = useState("black");
+    const [img, setImg] = useState("");
 
     useEffect(() => {
         const changeColorOnClick = () => {
-            if (color === "black") {
-                setColor("red");
+            if (Color === "black") {
+                setColor("#03045e");
             } else {
                 setColor("white");
             }
@@ -25,14 +25,14 @@ const Navbar = () => {
         return () => {
             document.removeEventListener("click", changeColorOnClick);
         };
-    }, [color]);
+    }, [Color]);
 
     useEffect(() => {
         const changeLogoOnClick = () => {
-            if (img === "/Media/Logo-white.png") {
+            if (img === "") {
                 setImg("/Media/Logo-black.png");
             } else {
-                setImg("/Media/Logo-black.png");
+                setImg("/Media/Logo-white.png");
             }
         };
 
@@ -45,23 +45,23 @@ const Navbar = () => {
 
     return (
         <nav className={navbar} role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
+            <div className="navbar-brand" style={{ Img: img }}>
                 <Link href="home">
-                    <Image src="/Media/Logo-white.png" style={{Img: img}} width={320} height={70} />
+                    <Image src="/Media/Logo-white.png" style={{ Img: img }} width={320} height={70} />
                 </Link>
-                <div className={navbarMenu} id="myNav">
+                <div className={navbarMenu} id="myNav" style={{ color: Color, }}>
                     <Link href="about">
-                        <a href="about" className={navLink} style={{backgroundColor: color,}}>
+                        <a href="about" className={navLink}>
                             About
                         </a>
                     </Link>
                     <Link className={navLink} href="services">
-                        <a href="about" className={navLink}>
+                        <a href="service" className={navLink}>
                             Services
                         </a>
                     </Link>
                     <Link className={navLink} href="contact">
-                        <a href="about" className={navLink}>
+                        <a href="contact" className={navLink}>
                             Contact us
                         </a>
                     </Link>

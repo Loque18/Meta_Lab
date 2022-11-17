@@ -1,0 +1,91 @@
+.headerService {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6rem;
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicesTitle {
+    font-size: 65px;
+    font-weight: 500;
+    color: #03045e;
+}
+
+.serviceDescription {
+    font-size: 35px;
+    font-weight: 400;
+    color: #03045e;
+}
+
+.servicesButton {
+    max-width: 20%;
+    margin: 3rem 0;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 249, 1) 0%, rgba(0, 255, 255, 1) 68%);
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.videoBoxHeader {
+    margin: 0 3rem;
+}
+
+.containerImg {
+    width: 95%;
+}
+
+
+// Middle Container //
+
+.middleServiceContainer {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceMiddleContent {
+    display: flex;
+}
+
+.wordBreak {
+    width: 20%;
+}
+
+.serviceContentTitle {
+    font-size: 4rem;
+    color: #03045e;
+    font-weight: 500;
+    margin: 0 auto;
+    width: 35rem;
+}
+
+.vestorImg {
+    width: 600px;
+}
+
+.videos {
+    width: 700px;
+}
+
+.serviceContentDescription {
+    // word-break: break-word;
+    max-width: 45.1%;
+    padding: 15px 0;
+    font-size: 27px;
+    text-align: left;
+    color: #03045e;
+
+}

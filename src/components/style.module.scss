@@ -18,13 +18,7 @@
 }
 
 .navLink {
-    color: #fff;
-
-    &:not(.disable):hover {
-        color: #fff;
-    }
-
-    // Disabling the hover effect on the navLink
+    color: #03045e;
 }
 
 // Nav bar responsive //
@@ -128,11 +122,9 @@
         margin: 3rem 0;
     }
 
-    .cardDescription {}
-
-    //     // .cardContent {
-    //     //     margin: 1rem 0;
-    //     // }
+    .cardDescription {
+        text-align: center;
+    }
 }
 
 @media all and (max-width: 600px) {
