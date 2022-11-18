@@ -56,7 +56,7 @@ const service = () => {
                 <video className={videos} style={{ pointerEvents: NaN }} autoPlay="true" onScroll="true" loop>
                   <source src={content.video} type="video/mp4" />
                 </video>
-                <img src={content.img} className={vestorImg} alt="" />
+              <img src={content.img} className={vestorImg} alt="" />
                 <div className={wordBreak}>
                   <h1 className={serviceContentTitle}>{content.title}</h1>
                 </div>
