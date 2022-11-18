@@ -2,22 +2,22 @@
 
 .navbar {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     padding: 2rem;
+    margin: 0;
 }
 
 .navbarMenu {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 19rem;
+    margin: 0 22rem;
     gap: 85px;
     font-size: 25px;
 }
 
 .navbarBrand {
     display: flex;
-    align-items: center;
 }
 
 .logoImg {
@@ -30,6 +30,17 @@
 
 // Nav bar responsive //
 
+@media all and (max-width: 300px) {
+    .navbarMenu {
+        color: #fff;
+        display: none;
+    }
+
+    .logoImg {
+        width: 400px;
+        margin: 0 1rem;
+    }
+}
 
 // Cards Component Design
 
@@ -170,7 +181,7 @@
 @media all and (max-width: 400px) {
 
     .footerContainer {
-        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 255, 1) 100%);
+        background: linear-gradient(90deg, rgba(0,8,147,1) 0%, rgba(0,255,255,1) 100%);
         display: flex;
         align-items: center;
         // justify-content: space-between;
@@ -178,7 +189,6 @@
         height: 40rem;
         padding: 0rem 5rem;
     }
-
     .footerTitle {
         text-align: center;
         font-size: 25px;

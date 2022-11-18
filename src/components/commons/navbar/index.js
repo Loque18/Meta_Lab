@@ -1,55 +1,58 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 // /* eslint import/newline-after-import: "off" */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useState, useEffect } from 'react';
 // import Image from 'next/image';
 import Link from 'next/link';
-import navStyles from 'src/components/style.module.scss'
+import navStyles from 'src/components/style.module.scss';
 
 const Navbar = () => {
-
-    const { navbar, navbarMenu, navLink, navbarBrand, logoImg } = navStyles;
-    const [Color, setColor] = useState("black");
-    const [img, setImg] = useState("");
+    const { navbar, navbarMenu, navLink, navbarBrand, logoImg, Links, myNav, hamburger } = navStyles;
+    const [Color, setColor] = useState('black');
+    const [img, setImg] = useState('');
+    const [opne, setOpen] = useState(false);
 
     useEffect(() => {
         const changeColorOnClick = () => {
-            if (Color === "black") {
-                setColor("#03045e");
+            if (Color === 'black') {
+                setColor('#03045e');
             } else {
-                setColor("white");
+                setColor('white');
             }
         };
 
-        document.addEventListener("click", changeColorOnClick);
+        document.addEventListener('click', changeColorOnClick);
 
         return () => {
-            document.removeEventListener("click", changeColorOnClick);
+            document.removeEventListener('click', changeColorOnClick);
         };
     }, [Color]);
 
     useEffect(() => {
         const changeLogoOnClick = () => {
-            if (img === "") {
-                setImg("/Media/Logo-black.png");
+            if (img === '') {
+                setImg('/Media/Logo-black.png');
             } else {
-                setImg("/Media/Logo-white.png");
+                setImg('/Media/Logo-white.png');
             }
         };
 
-        document.addEventListener("click", changeLogoOnClick);
+        document.addEventListener('click', changeLogoOnClick);
 
         return () => {
-            document.removeEventListener("click", changeLogoOnClick);
+            document.removeEventListener('click', changeLogoOnClick);
         };
     }, [img]);
 
     return (
         <nav className={navbar} role="navigation" aria-label="main navigation">
-            <div className={navbarBrand} style={{ Img: img }}>
+            <div className={navbarBrand}  style={{ Img: img }}>
                 <Link href="home">
                     <img src="/Media/Logo-white.png" className={logoImg} alt="" />
                 </Link>
-                <div className={navbarMenu} id="myNav" style={{ color: Color, }}>
+            </div>
+            <div className={navbarMenu} id={myNav} style={{ color: Color }}>
                     <Link href="about">
                         <a href="about" className={navLink}>
                             About
@@ -66,7 +69,6 @@ const Navbar = () => {
                         </a>
                     </Link>
                 </div>
-            </div>
         </nav>
     );
 };
