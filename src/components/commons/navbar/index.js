@@ -1,13 +1,13 @@
 // /* eslint import/newline-after-import: "off" */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
-import styles from 'src/components/style.module.scss'
+import navStyles from 'src/components/style.module.scss'
 
 const Navbar = () => {
 
-    const { navbar, navbarMenu, navLink } = styles;
+    const { navbar, navbarMenu, navLink, navbarBrand, logoImg } = navStyles;
     const [Color, setColor] = useState("black");
     const [img, setImg] = useState("");
 
@@ -45,9 +45,9 @@ const Navbar = () => {
 
     return (
         <nav className={navbar} role="navigation" aria-label="main navigation">
-            <div className="navbar-brand" style={{ Img: img }}>
+            <div className={navbarBrand} style={{ Img: img }}>
                 <Link href="home">
-                    <Image src="/Media/Logo-white.png" style={{ Img: img }} width={320} height={70} />
+                    <img src="/Media/Logo-white.png" className={logoImg} alt="" />
                 </Link>
                 <div className={navbarMenu} id="myNav" style={{ color: Color, }}>
                     <Link href="about">

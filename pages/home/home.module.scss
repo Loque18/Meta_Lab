@@ -1,12 +1,15 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .bg {
     background-color: #f0f0f0;
-    background-image: url('/Media/heroImg.png');
-    background-attachment: fixed;
+    background: url('/Media/heroImg.png') no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 90vh;
+    max-height: 80vh;
+    object-fit: cover;
 }
 
 .multipleColor {
@@ -14,6 +17,8 @@
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     margin: 6rem 4rem;
 }
 
@@ -26,19 +31,18 @@
 
 .description {
     color: #fff;
-    line-height: 1.7rem; 
-    word-spacing: 3px;   
+    line-height: 1.7rem;
+    word-spacing: 3px;
     font-size: 20px;
-    margin: 1rem auto;
     letter-spacing: 1px;
-    width: auto auto;
 }
 
 .btnMain {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,249,1) 0%, rgba(0,255,255,1) 68%);
+    display:inline-block;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 249, 1) 0%, rgba(0, 255, 255, 1) 68%);
     padding: 0.7rem;
     border-radius: 10px;
-    width: 10%;
+    width: 10vw;
     border: 0;
     outline: none;
     color: #fff;
@@ -47,7 +51,4 @@
     font-weight: bold;
     margin: 2rem 0;
 }
-
-
-
 

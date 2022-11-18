@@ -2,38 +2,34 @@
 
 .navbar {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 2rem;
-    z-index: 0;
 }
 
 .navbarMenu {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 25rem;
+    margin: 0 19rem;
     gap: 85px;
     font-size: 25px;
-    // color: black;
+}
+
+.navbarBrand {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    width: 380px;
 }
 
 .navLink {
-    color: #03045e;
+    color: #fff;
 }
 
 // Nav bar responsive //
 
-@media all and (max-width: 600px) {
-    .navbarMenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 19rem;
-        gap: 65px;
-        font-size: 25px;
-        color: #fff;
-    }
-}
 
 // Cards Component Design
 
@@ -42,7 +38,7 @@
     align-items: center;
     justify-content: center;
     gap: 70px;
-    margin: 27rem auto;
+    margin: 20rem auto;
 }
 
 .card {
@@ -95,14 +91,16 @@
 
 // Card Responsive //
 
-@media all and (max-width: 400px) {
+@media screen and (max-width: 390px) {
     .cardContainer {
         display: flex;
         flex-direction: column;
+        margin: 16rem 0;
     }
 
     .card {
-        width: 70vw;
+        width: 79vw;
+        height: 50vh;
     }
 
     .cardContent {
@@ -114,103 +112,16 @@
     }
 
     .imgBox {
-        // margin: 2rem auto;
         padding: 0 2rem;
     }
 
     .cardTitle {
-        margin: 3rem 0;
+        margin: 1rem 1rem;
     }
 
     .cardDescription {
         text-align: center;
-    }
-}
-
-@media all and (max-width: 600px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
-    }
-
-    .card {
-        width: 70vw;
-        height: 40vh;
-    }
-
-    .cardContent {
-        padding: 1rem;
-    }
-
-    .cardImg {
-        width: 130px;
-    }
-
-    .cardTitle {
-        margin: 0.2rem 1rem;
-    }
-
-    .cardDescription {
-        width: 250px;
-    }
-}
-
-@media all and (max-width: 700px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
-    }
-
-    .card {
-        width: 70vw;
-        height: 40vh;
-    }
-
-    .cardContent {
-        padding: 1rem;
-    }
-
-    .cardImg {
-        width: 130px;
-    }
-
-    .cardTitle {
-        margin: 0.2rem 1rem;
-    }
-
-    .cardDescription {
-        width: 250px;
-    }
-}
-
-@media all and (max-width: 800px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
-    }
-
-    .card {
-        width: 70vw;
-        height: 40vh;
-    }
-
-    .cardContent {
-        padding: 1rem;
-    }
-
-    .cardImg {
-        width: 130px;
-    }
-
-    .cardTitle {
-        margin: 0.2rem 1rem;
-    }
-
-    .cardDescription {
-        width: 250px;
+        margin: 0 2px;
     }
 }
 
@@ -254,6 +165,38 @@
     max-width: 100rem;
 }
 
+
+// MetaFooter Responsive //
+@media all and (max-width: 400px) {
+
+    .footerContainer {
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 255, 1) 100%);
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        justify-content: center;
+        height: 40rem;
+        padding: 0rem 5rem;
+    }
+
+    .footerTitle {
+        text-align: center;
+        font-size: 25px;
+        padding: 1rem 0;
+    }
+
+    .footerDescription {
+        font-size: 25px;
+        line-height: 35px;
+        letter-spacing: 1px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .imgSize {
+        display: none;
+    }
+}
 
 // Our Services
 
@@ -337,6 +280,8 @@
     margin: 1rem auto;
     font-weight: 400;
 }
+
+
 
 // TeamCard responsive //
 
