@@ -1,0 +1,22 @@
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: none;
+
+    img,
+    video {
+        position: absolute;
+        top: 0;
+
+        height: 100%;
+    }
+}
+
+.interval {
+    flex-direction: row-reverse;
+}

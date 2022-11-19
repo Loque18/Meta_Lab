@@ -1,4 +1,5 @@
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
+import { getLayout as getMainLayout } from 'src/layouts/main';
 import Navbar from 'src/components/commons/navbar';
 import Cards from 'src/components/commons/cards/Cards';
 import ComponentStyle from 'src/components/style.module.scss';
@@ -70,8 +71,7 @@ const Home = () => {
                         <br />
                         business strategies to web development and brand design
                         <br />
-                        to IT solutions, we help you turn your innovative ideas into competitive market-ready
-                        solutions.
+                        to IT solutions, we help you turn your innovative ideas into competitive market-ready solutions.
                     </p>
                 </div>
                 <div className={footerImgcontainer}>
@@ -89,11 +89,10 @@ const Home = () => {
                     View All
                 </button>
             </div>
-
         </div>
     );
 };
 
-Home.getLayout = page => getPageTitleLayout(page, 'Home');
+Home.getLayout = page => getPageTitleLayout(getMainLayout(page), 'Home');
 
 export default Home;

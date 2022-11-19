@@ -8,7 +8,7 @@
     animation: gradientAnimation 15s ease infinite !important;
 }
 
-.has-hover-animated-gradient:hover{
+.has-hover-animated-gradient:hover {
     @extend .has-animated-gradient;
 }
 
@@ -47,13 +47,45 @@
 }
 
 @mixin generate-gradients-classes($gradient, $gradientName) {
-    .has-background-#{$gradientName} {
+    .has-bg-#{$gradientName} {
         background: $gradient !important;
     }
 
-    .is-#{$gradientName} {
-        background: $gradient !important;
-        border: none !important;
+    // .is-#{$gradientName} {
+    //     background: $gradient !important;
+    //     border: none !important;
+    // }
+
+    // button
+    .button.is-#{$gradientName} {
+        background: $gradient;
+        border: none;
+        border-color: transparent;
+        color: white;
+
+        transition: 0.25s;
+
+        &:hover:enabled {
+            // background-color: lighten($gradient, 10) !important;
+            border-color: transparent;
+            box-shadow: 0 0 0 0.125em rgba($cyan, 0.75);
+            color: white;
+
+            filter: brightness(1.1);
+        }
+
+        &:active:enabled {
+            border-color: transparent;
+            box-shadow: 0 0 0 0.125em rgba($cyan, 1);
+            color: white;
+
+            filter: brightness(1.2);
+        }
+
+        &:focus:enabled {
+            box-shadow: 0 0 0 0.125em rgba($blue, 0.5) !important;
+            color: white;
+        }
     }
 }
 

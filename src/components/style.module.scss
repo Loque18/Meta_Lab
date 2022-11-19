@@ -58,20 +58,19 @@
     justify-content: center;
     border-radius: 30px;
     box-shadow: 8px 10px 20px -10px rgba(128, 128, 128, 0.75);
-    transition: transform .2s;
+    transition: transform 0.2s;
     width: 20vw;
     height: 42vh;
     text-align: center;
 }
 
 .card:nth-child(2) {
-    background: linear-gradient(90deg, rgba(7, 1, 129, 0.8) 8%, rgba(0, 255, 255, 0.8) 66%, );
+    background: linear-gradient(90deg, rgba(7, 1, 129, 0.8) 8%, rgba(0, 255, 255, 0.8) 66%);
     transform: scale(1.1);
 }
 
-
 .card:hover {
-    background: linear-gradient(90deg, rgba(7, 1, 129, 0.8) 8%, rgba(0, 255, 255, 0.8) 66%, );
+    background: linear-gradient(90deg, rgba(7, 1, 129, 0.8) 8%, rgba(0, 255, 255, 0.8) 66%);
     transform: scale(1.1);
 }
 
@@ -84,7 +83,6 @@
 .imgBox:nth-child(2) {
     width: 40%;
 }
-
 
 .cardTitle {
     text-align: center;
@@ -176,12 +174,10 @@
     max-width: 100rem;
 }
 
-
 // MetaFooter Responsive //
 @media all and (max-width: 400px) {
-
     .footerContainer {
-        background: linear-gradient(90deg, rgba(0,8,147,1) 0%, rgba(0,255,255,1) 100%);
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 255, 1) 100%);
         display: flex;
         align-items: center;
         // justify-content: space-between;
@@ -280,7 +276,7 @@
 
 .position {
     font-size: 25px;
-    color: #00a2ff
+    color: #00a2ff;
 }
 
 .teamDescription {
@@ -291,11 +287,9 @@
     font-weight: 400;
 }
 
-
-
 // TeamCard responsive //
 
-@media all and (max-width:600px) {
+@media all and (max-width: 600px) {
     .teamContainer {
         display: flex;
         align-items: center;
@@ -385,7 +379,6 @@
     }
 }
 
-
 @media all and (max-width: 900px) {
     .teamContainer {
         display: flex;
@@ -432,7 +425,7 @@
     }
 }
 
-// rounded Images 
+// rounded Images
 
 .roundImgContainer {
     display: flex;
@@ -457,8 +450,6 @@
     clip-path: circle();
 }
 
-
-
 .Box {
     display: flex;
     align-items: center;
@@ -466,7 +457,6 @@
     clip-path: circle();
     padding: 3px 0;
 }
-
 
 // FOOTER //
 .FooterContainer {
@@ -481,7 +471,6 @@
     padding: 3rem;
 }
 
-
 .FooterIcons {
     display: flex;
     align-items: center;
@@ -492,7 +481,6 @@
 .ImgIcon {
     width: 75px;
 }
-
 
 .mailContainer {
     display: flex;
@@ -514,7 +502,6 @@
     color: hsl(0, 0%, 61%);
     font-size: 20px;
 }
-
 
 // @media all and (max-width: 900px) {
 //     .teamContainer {
@@ -565,7 +552,7 @@
 //     }
 // }
 
-// #ff00ff for the fuchsia 
+// #ff00ff for the fuchsia
 // #00ffff for the cyan
-// #03045e for the dark blue 
+// #03045e for the dark blue
 // #fafafa for the light grey
