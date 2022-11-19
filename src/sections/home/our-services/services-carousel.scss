@@ -1,0 +1,32 @@
+@import 'src/scss/vars';
+
+.services-carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+
+    .p-carousel-prev,
+    .p-carousel-next {
+        &:hover {
+            background-color: transparent !important;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+
+    .p-carousel-prev-icon,
+    .p-carousel-next-icon {
+        font-size: 3rem;
+        color: $blue;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-carousel-container {
+        .p-carousel-prev-icon,
+        .p-carousel-next-icon {
+            font-size: 1.5rem;
+        }
+    }
+}

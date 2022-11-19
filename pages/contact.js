@@ -12,10 +12,12 @@ const ContactUs = () => {
     contentBoxContainer,
     formBox,
     Input,
-    commentInput,
     formButton,
     imgBox,
+    desktopImage,
     contactInformation,
+    info,
+    Inputcomment
   } = style;
   return (
     <div className={contactContainer}>
@@ -34,20 +36,21 @@ const ContactUs = () => {
             <input type="email" placeholder="Email" className={Input} />
             <input type="tel" placeholder="Phone" className={Input} />
             <input type="text" placeholder="Subject" className={Input} />
-            <input type="text" className={commentInput} />
+            <input type="text" placeholder='how can we help ?' className={Inputcomment} />
+            <br />
             <button className={formButton} type="button">
               Send
             </button>
           </form>
           <div className={imgBox}>
-            <img src="/Media/desktopIcon.png" alt="icon.png" />
+            <img src="/Media/desktopIcon.png" className={desktopImage} alt="icon.png" />
           </div>
         </div>
-        <div className={contactInformation}>
-          <span>Location goes here</span>
-          <span>info@metalab.business</span>
-          <span>00 971 123 456 789</span>
-        </div>
+      </div>
+      <div className={contactInformation}>
+        <h3 className={info}>Location goes here</h3>
+        <h3 className={info}>info@metalab.business</h3>
+        <h3 className={info}>00 971 123 456 789</h3>
       </div>
       <Footer />
     </div>

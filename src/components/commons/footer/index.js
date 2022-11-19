@@ -1,33 +1,46 @@
-import Image from "next/image";
-import FooterStyle from 'src/components/style.module.scss'
-import iconImg from "../Icons/icons";
+import socialMediaData from 'src/static/social-media';
+import style from './footer.module.scss';
+
+const { container } = style;
 
 const Footer = () => {
-    const { FooterContainer, FooterContent, FooterIcons, logoBox, logoFooter, socialIcons, mailContainer, mailImg, mailText, ImgIcon, CopyRights } = FooterStyle;
     return (
-        <footer className={FooterContainer}>
-            <div className={FooterContent}>
-                <div className={logoBox}>
-                    <Image src="/Media/Logo-black.png" className={logoFooter} width={320} height={85} />
-                </div>
-                <div className={FooterIcons}>
-                    {
-                        iconImg.map((icons) => {
-                            return (
-                                <div className={socialIcons} key={icons.id}>
-                                    <img src={icons.img} className={ImgIcon} alt="icons.png" />
-                                </div>
-                            )
-                        })
-                    }
+        <footer className="footer pb-6">
+            <div className="container">
+                <div className={`columns ${container}`}>
+                    <div className="column">
+                        <img src="/Media/Logo-black.png" alt="" width="200" />
+                    </div>
 
+                    <div className="column">
+                        <div className="flex" style={{ columnGap: '1rem' }}>
+                            {socialMediaData.map(sm => (
+                                <a
+                                    key={sm.id}
+                                    href={sm.link}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="has-text-grey is-size-4"
+                                    style={{ display: 'block' }}
+                                >
+                                    <span className="icon has-text-blue">{sm.logo()}</span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="column">
+                        <h1 className="title is-5 has-text-blue flex align-items-center">
+                            <span className="icon has-text-blue is-size-5 mr-2">
+                                <i className="far fa-envelope" />
+                            </span>
+                            Get in touch
+                        </h1>
+                    </div>
                 </div>
-                <div className={mailContainer}>
-                    <img src="/Media/Mail.png" className={mailImg} alt="" />
-                    <h1 className={mailText}>Get in touch with us</h1>
-                </div>
+
+                <h1 className="has-text-centered is-size-7">© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
             </div>
-            <h1 className={CopyRights}>© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
         </footer>
     );
 };

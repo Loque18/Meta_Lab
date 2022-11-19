@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import dataServices from 'src/components/commons/servicesData/services';
+import servicesData from 'src/static/services-data';
 
 import styles from './styles.module.scss';
 
@@ -9,7 +9,7 @@ const FeaturesComponent = () => {
     return (
         <section>
             <div className="container px-2 py-8">
-                {dataServices.map((item, idx) => (
+                {servicesData.map((item, idx) => (
                     <div className={`columns is-vcentered ${(idx + 1) % 2 === 0 ? interval : ''}`} key={item.id}>
                         <div className="column">
                             <h1 className="title has-text-blue has-text-centered-mobile">{item.title}</h1>

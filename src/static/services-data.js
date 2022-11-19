@@ -1,4 +1,4 @@
-const dataServices = [
+const servicesData = [
     {
         id: '1',
         title: '1. Smart Contract Development',
@@ -45,4 +45,4 @@ const dataServices = [
     },
 ];
 
-export default dataServices;
+export default servicesData;

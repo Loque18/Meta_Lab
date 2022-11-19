@@ -6,6 +6,7 @@ $cyan: #00ffff;
 $lgrey: #fafafa;
 
 $gra1: linear-gradient(90deg, $fuchsia, $cyan);
+$gra2: linear-gradient(90deg, $blue, $cyan);
 
 $hcolors: (
     blue: $blue,
@@ -16,6 +17,7 @@ $hcolors: (
 
 $hgras: (
     gra1: $gra1,
+    gra2: $gra2,
 );
 
 $z-index-glasspanel: 100;

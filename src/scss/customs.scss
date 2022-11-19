@@ -1,0 +1,20 @@
+@import './vars';
+
+.title {
+    &.c {
+        span {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20%;
+                height: 4px;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                border-radius: 4px;
+                background: $cyan;
+            }
+        }
+    }
+}
