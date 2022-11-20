@@ -32,7 +32,10 @@ const HomeOurServices = () => {
                     </div>
                     <div className={`${cardBox} ${backFace}`}>
                         {/* <img src="https://picsum.photos/200" alt="" /> */}
-                        <h1 className="subtitle has-text-lgrey is-5 has-text-centered mb-0">
+                        <h1 className="title has-text-lgrey is-5 has-text-centered">
+                            {item.title.substring(3, item.title.length)}
+                        </h1>
+                        <h1 className="subtitle has-text-lgrey is-6 has-text-centered mb-0">
                             {`${item.description.substring(0, 80)}...`}
                         </h1>
 

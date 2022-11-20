@@ -33,7 +33,6 @@
     // justify-content: space-between;
 }
 
-
 .chatButton {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 249, 1) 0%, rgba(0, 255, 255, 1) 68%);
     padding: 0.7rem;
@@ -45,7 +44,6 @@
     cursor: pointer;
     font-weight: bold;
     width: 26%;
-
 }
 
 // About Section //
@@ -64,28 +62,6 @@
     text-align: center;
 }
 
-.aboutTitle {
-    font-size: 40px;
-    color: #03045e;
-    font-weight: 500;
-    // border-bottom: 2px solid #00ffff;
-    padding: 2rem 0;
-    position: relative;
-}
-
-.aboutTitle:after {
-    content: '';
-    background-color: #00ffff;
-    position: absolute;
-    height: 4px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 1rem;
-    width: 15%;
-    margin: 0 auto;
-}
-
 .aboutDescription {
     text-align: center;
     width: 45%;
@@ -94,10 +70,7 @@
     word-break: break-all;
 }
 
-
-
 // icon section //
-
 
 .iconSection {
     display: flex;
@@ -152,7 +125,4 @@
         word-break: keep-all;
         text-align: center;
     }
-
-
-
 }

@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import dataServices from 'src/components/commons/servicesData/services';
 
 import styles from './styles.module.scss';
 
