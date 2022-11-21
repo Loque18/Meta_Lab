@@ -15,6 +15,12 @@ $ww: $lgrey;
         --bg-color: #{darken(rgba($blue, 0.8), 10)};
     }
 
+    &.home {
+        --text-color: #{rgba($ww, 0.75)};
+        --text-color-hover: #{$ww};
+        --bg-color: transparent;
+    }
+
     transition: 1s;
 
     background-color: var(--bg-color) !important;

@@ -66,7 +66,9 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'}`}
+            className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'} ${
+                !bgColor && router.pathname === '/home' ? 'home' : ''
+            }`}
             role="navigation"
             aria-label="main navigation"
         >
@@ -75,7 +77,11 @@ const Navbar = () => {
                     <Link href="/home" passHref>
                         <a className="navbar-item">
                             <img
-                                src={bgColor || mobileActive ? '/Media/Logo-white.png' : '/Media/Logo-black.png'}
+                                src={
+                                    bgColor || mobileActive || (!bgColor && router.pathname === '/home')
+                                        ? '/Media/Logo-white.png'
+                                        : '/Media/Logo-black.png'
+                                }
                                 alt="Metalab Logo"
                             />
                         </a>
@@ -84,7 +90,9 @@ const Navbar = () => {
                     <a
                         role="button"
                         className={`navbar-burger  ${burgerActive ? ' is-active ' : ' '} ${
-                            bgColor || burgerActive ? 'has-text-white' : 'has-text-blue'
+                            bgColor || burgerActive || (!bgColor && router.pathname === '/home')
+                                ? 'has-text-white'
+                                : 'has-text-blue'
                         }`}
                         aria-label="menu"
                         aria-expanded="false"
@@ -104,7 +112,6 @@ const Navbar = () => {
                                 <span>About</span>
                             </a>
                         </Link>
-
                         <Link href="/services" passHref>
                             <a className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}>
                                 <span>Services</span>
@@ -114,7 +121,7 @@ const Navbar = () => {
                             <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
                                 <span>Contact us</span>
                             </a>
-                        </Link>
+                        </Link>{' '}
                         {/* <Link href="/contact" passHref>
                             <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
                                 <span>Contact us</span>
