@@ -46,7 +46,7 @@
     width: 50rem;
     margin: 0 6rem;
     background-color: #fff;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     border-radius: 30px;
 }
 
@@ -58,18 +58,14 @@
     border-bottom: 1px solid #03045e;
     outline: none;
     padding: 1rem 0;
+    font-size: 18px;
 }
-
 
 
 .Input::placeholder {
     color: #03045e;
     font-weight: 200;
-    font-size: 18px;
-    line-height: normal;
-}
-
-.Input::-webkit-input-placeholder {
+    font-size: 20px;
     line-height: normal;
 }
 
@@ -77,17 +73,16 @@
     margin: 1rem 1rem;
     border: none;
     border-bottom: 1px solid #03045e;
-    padding: 5rem 0;
     outline: none;
+    padding: 1rem 0;
 }
 
 .Inputcomment::placeholder {
     color: #03045e;
     font-weight: 200;
-    font-size: 18px;
-    line-height: 1.4em;
+    font-size: 20px;
+    line-height: 12rem;
 }
-
 
 
 .formButton {
@@ -123,6 +118,54 @@
     // padding: 1rem;
 }
 
+
+@media all and (max-width: 300px) {
+
+    .contactTitle {
+        font-size: 70px;
+    }
+
+    .contactContainer {
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 239, 1) 100%); // height: 100%;
+    }
+
+    .contentBoxContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        font-size: 40px;
+    }
+
+    .contactContentDescription {
+        font-size: 45px;
+    }
+
+    .formBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 150vw;
+        background-color: #fff;
+        border-radius: 30px;
+        margin: 0 1rem;
+    }
+
+    .desktopImage {
+        padding: 2rem 0;
+    }
+
+    .formButton {
+        width: 30vw;
+    }
+
+    .contactInformation {
+        margin: 1rem 1rem;
+        line-height: 55px;
+        font-size: 23px;
+    }
+}
+
+
+
 @media all and (max-width: 400px) {
 
     .contactTitle {
@@ -131,29 +174,183 @@
 
     .contactContainer {
         background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 239, 1) 100%); // height: 100%;
-        min-width: fit-content;
-        height: 150%;
     }
 
     .contentBoxContainer {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         font-size: 40px;
     }
 
     .contactContentDescription {
-        font-size: 30px;
+        font-size: 45px;
     }
 
     .formBox {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 15px;
-        padding: 7rem 0;
         width: 150vw;
-        margin: 0 9rem;
         background-color: #fff;
         border-radius: 30px;
+        margin: 0 1rem;
+    }
+
+    .desktopImage {
+        padding: 2rem 0;
+    }
+
+    .formButton {
+        width: 30vw;
+    }
+
+    .contactInformation {
+        margin: 1rem 1rem;
+        line-height: 55px;
+        font-size: 23px;
     }
 }
+
+
+@media all and (max-width: 500px) {
+
+    .contactTitle {
+        font-size: 70px;
+    }
+
+    .contactContainer {
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 239, 1) 100%); // height: 100%;
+    }
+
+    .contentBoxContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        font-size: 40px;
+    }
+
+    .contactContentDescription {
+        font-size: 45px;
+    }
+
+    .formBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 150vw;
+        background-color: #fff;
+        border-radius: 30px;
+        margin: 0 1rem;
+    }
+
+    .desktopImage {
+        padding: 2rem 0;
+    }
+
+    .formButton {
+        width: 40%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contactInformation {
+        margin: 1rem 1rem;
+        line-height: 55px;
+        font-size: 23px;
+    }
+}
+
+
+
+@media all and (max-width: 700px) {
+
+    .contactTitle {
+        font-size: 70px;
+    }
+
+    .contactContainer {
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 239, 1) 100%); // height: 100%;
+    }
+
+    .contentBoxContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        font-size: 40px;
+    }
+
+    .contactContentDescription {
+        font-size: 45px;
+    }
+
+    .formBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 150vw;
+        background-color: #fff;
+        border-radius: 30px;
+        margin: 0 1rem;
+    }
+
+    .desktopImage {
+        padding: 2rem 0;
+    }
+
+    .formButton {
+        width: 30vw;
+    }
+
+    .contactInformation {
+        margin: 1rem 1rem;
+        line-height: 55px;
+        font-size: 23px;
+    }
+}
+
+
+@media all and (max-width: 900px) {
+
+    .contactTitle {
+        font-size: 70px;
+    }
+
+    .contactContainer {
+        background: linear-gradient(90deg, rgba(0, 8, 147, 1) 0%, rgba(0, 255, 239, 1) 100%); // height: 100%;
+    }
+
+    .contentBoxContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        font-size: 40px;
+    }
+
+    .contactContentDescription {
+        font-size: 45px;
+    }
+
+    .formBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 150vw;
+        background-color: #fff;
+        border-radius: 30px;
+        margin: 0 1rem;
+    }
+
+    .desktopImage {
+        padding: 2rem 0;
+    }
+
+    .formButton {
+        width: 20vw;
+        // font-size: 20px;
+    }
+
+    .contactInformation {
+        margin: 1rem 1rem;
+        line-height: 55px;
+        font-size: 23px;
+    }
+}
+
+
