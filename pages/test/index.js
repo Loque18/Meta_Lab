@@ -1,10 +1,9 @@
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import { getLayout as getMainLayout } from 'src/layouts/main';
 import style from 'src/components/style.module.scss';
-import teamCards from 'src/components/commons/TeamCards/TeamCards';
+import teamCards from 'src/static/teamData';
 
 const TestPage = () => {
-
     const { teamContainer, teamBox, cardContent, teamName, position, teamDescription, imgTeam, boxImg } = style;
 
     return (
@@ -21,7 +20,6 @@ const TestPage = () => {
                             <p className={teamDescription}>{cards.description}</p>
                         </div>
                     </div>
-
                 );
             })}
         </div>

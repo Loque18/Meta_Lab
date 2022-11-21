@@ -4,6 +4,8 @@
     &.c {
         span {
             position: relative;
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
             &::after {
                 content: '';
                 position: absolute;

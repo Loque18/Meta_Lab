@@ -1,0 +1,10 @@
+.textContainer {
+    max-width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .textContainer {
+        max-width: 90%;
+    }
+}
