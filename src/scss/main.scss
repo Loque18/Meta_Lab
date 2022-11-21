@@ -27,6 +27,7 @@ body,
 body {
     @extend .coolscroll;
     scroll-behavior: smooth;
+    font-size: 100%
 }
 
 #__next {

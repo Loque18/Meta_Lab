@@ -32,11 +32,11 @@ const ContactUs = () => {
       <div className={Box}>
         <div className={contentBoxContainer}>
           <form className={formBox}>
-            <input type="text" placeholder="Name" className={Input} name="Name" />
-            <input type="email" placeholder="Email" className={Input} />
-            <input type="tel" placeholder="Phone" className={Input} />
-            <input type="text" placeholder="Subject" className={Input} />
-            <input type="text" placeholder='how can we help ?' className={Inputcomment} />
+            <input type="text" placeholder="Name" className={Input} name="Name" required />
+            <input type="email" placeholder="Email" className={Input} required />
+            <input type="tel" placeholder="Phone" className={Input} required />
+            <input type="text" placeholder="Subject" className={Input} required />
+            <input type="text" placeholder='How can we help ?' className={Inputcomment} />
             <br />
             <button className={formButton} type="button">
               Send
@@ -48,9 +48,15 @@ const ContactUs = () => {
         </div>
       </div>
       <div className={contactInformation}>
-        <h3 className={info}>Location goes here</h3>
-        <h3 className={info}>info@metalab.business</h3>
-        <h3 className={info}>00 971 123 456 789</h3>
+        <h3 className={info}>
+          <i className="far fa-location" /> Location goes here
+        </h3>
+        <h3 className={info}>
+          <i className="far fa-envelope" /> info@metalab.business
+        </h3>
+        <h3 className={info}>
+          <i className="far fa-phone" /> 00 971 123 456 789
+        </h3>
       </div>
       <Footer />
     </div>
