@@ -9,3 +9,14 @@
     height: 1px;
     min-height: calc(100vh - #{$navbar-height});
 }
+
+@media screen and (max-width: 768px) {
+    .column {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}

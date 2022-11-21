@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import Image from 'next/image';
 import Link from 'next/link';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 // import { providers } from '@celeste-js/core/dist/constants';
 import { useDispatch } from 'react-redux';
@@ -17,6 +17,8 @@ import { useState, useEffect } from 'react';
 import modals from 'src/static/app.modals';
 
 const Navbar = () => {
+    const router = useRouter();
+
     // local state
     const [mobileActive, setMobileActive] = useState(false);
     const [burgerActive, setBurgerActive] = useState(false);
@@ -64,22 +66,26 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`navbar custom-navbar is-fixed-top 
-            ${bgColor ? 'has-bg-blue-o-80 has-bg-blur-1' : 'has-bg-transparent'}`}
+            className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'}`}
             role="navigation"
             aria-label="main navigation"
         >
-            <div className="container is-afluid ">
+            <div className="container">
                 <div href="https://www.orcania.io" className="navbar-brand  ">
                     <Link href="/home" passHref>
                         <a className="navbar-item">
-                            <img src="/Media/Logo-black.png" alt="Metalab Logo" />
+                            <img
+                                src={bgColor || mobileActive ? '/Media/Logo-white.png' : '/Media/Logo-black.png'}
+                                alt="Metalab Logo"
+                            />
                         </a>
                     </Link>
 
                     <a
                         role="button"
-                        className={`navbar-burger has-text-white ${burgerActive ? 'is-active' : ''}`}
+                        className={`navbar-burger  ${burgerActive ? ' is-active ' : ' '} ${
+                            bgColor || burgerActive ? 'has-text-white' : 'has-text-blue'
+                        }`}
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample"
@@ -91,26 +97,38 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                <div className={`navbar-menu ${mobileActive ? 'is-active animate__animated animate__fadeInLeft' : ''}`}>
+                <div className={`navbar-menu ${mobileActive ? 'is-active ' : ''}`}>
                     <div className="navbar-start">
                         <Link href="/about" passHref>
-                            <a className="navbar-item is-active">
+                            <a className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}>
                                 <span>About</span>
                             </a>
                         </Link>
 
                         <Link href="/services" passHref>
-                            <a className="navbar-item">
+                            <a className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}>
                                 <span>Services</span>
                             </a>
                         </Link>
                         <Link href="/contact" passHref>
-                            <a className="navbar-item">
+                            <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
                                 <span>Contact us</span>
                             </a>
                         </Link>
+                        {/* <Link href="/contact" passHref>
+                            <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
+                                <span>Contact us</span>
+                            </a>
+                        </Link>
+                        <Link href="/contact" passHref>
+                            <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
+                                <span>Contact us</span>
+                            </a>
+                        </Link> */}
                     </div>
                 </div>
+
+                <div />
             </div>
         </nav>
     );

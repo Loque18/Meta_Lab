@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 import styles from './style.module.scss';
 
-const { bg } = styles;
+const { bg, column } = styles;
 
 const HomeBanner = () => {
     return (
         <section className={bg}>
             <div className="container" style={{ height: '100%' }}>
                 <div className="columns is-vcentered is-marginless" style={{ height: '100%' }}>
-                    <div className="column is-6">
+                    <div className={`column is-6 ${column}`}>
                         <h1 className="title is-1 has-text-white has-text-centered-mobile">
                             METALAB, YOUR <br />
                             <span className="has-text-cyan">GATEWAY TO WEB3</span>

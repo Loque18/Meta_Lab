@@ -20,3 +20,13 @@
 .interval {
     flex-direction: row-reverse;
 }
+
+@media screen and (max-width: 768px) {
+    .textContainer {
+        margin: auto;
+    }
+
+    .mb {
+        margin-bottom: 5rem !important;
+    }
+}

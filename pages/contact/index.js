@@ -37,7 +37,7 @@ const ContactUs = () => {
 
     return (
         <section className={root}>
-            <div className="container px-5 flex flex-row align-items-center" style={{ height: '100%' }}>
+            <div className="container px-5 flex flex-row align-items-center " style={{ height: '100%' }}>
                 <div className="columns is-vcentered">
                     <div className="column mb-6">
                         <form onSubmit={formik.handleSubmit}>

@@ -3,11 +3,25 @@
 $ww: $lgrey;
 
 .custom-navbar {
-    transition: 0.5s;
+    &.light {
+        --text-color: #{rgba($blue, 0.75)};
+        --text-color-hover: #{$blue};
+        --bg-color: transparent;
+    }
+
+    &.dark {
+        --text-color: #{rgba($ww, 0.75)};
+        --text-color-hover: #{$ww};
+        --bg-color: #{darken(rgba($blue, 0.8), 10)};
+    }
+
+    transition: 1s;
+
+    background-color: var(--bg-color) !important;
 
     .navbar-menu {
         .navbar-item {
-            color: rgba($blue, 0.75);
+            color: var(--text-color);
 
             margin-right: 1rem;
 
@@ -22,7 +36,7 @@ $ww: $lgrey;
 
                 span {
                     position: relative;
-                    color: $blue;
+                    color: var(--text-color-hover);
                     &::after {
                         content: '';
                         position: absolute;
@@ -30,7 +44,7 @@ $ww: $lgrey;
                         left: 50%;
                         width: 100%;
                         height: 3px;
-                        background: $blue;
+                        background: var(--text-color-hover);
                         transform: translate(-50%, 0);
                     }
                 }
@@ -39,11 +53,7 @@ $ww: $lgrey;
             &:focus {
                 // background: rgba($white, 1) !important;
                 background: rgba(0, 0, 0, 0) !important;
-                color: rgba(white, 0.75) !important;
-            }
-
-            &:first-child {
-                margin-left: 2rem;
+                // color: rgba($blue, 0.75) !important;
             }
         }
     }
@@ -54,9 +64,12 @@ $ww: $lgrey;
             top: 0;
             width: 100%;
             height: 100vh !important;
-            background: darken($blue, 20) !important;
+            background: darken(rgba($blue, 0.9), 10) !important;
             padding-top: 4rem;
             max-height: 100vh !important;
+
+            // -webkit-backdrop-filter: blur(10px) !important;
+            // backdrop-filter: blur(10px) !important;
 
             transition: 1s;
             transform: translateX(100%);
@@ -75,18 +88,38 @@ $ww: $lgrey;
                 .navbar-item {
                     text-align: center !important;
                     font-size: 1.5rem;
-                }
-            }
+                    color: $ww;
 
-            .navbar-end {
-                position: absolute;
-                bottom: 0;
-                padding-bottom: 3rem;
-                width: 100%;
-                overflow: hidden;
+                    margin: 0;
 
-                .navbar-item {
-                    // width: 33 !important;
+                    &.is-active,
+                    &:hover {
+                        background-color: $ww;
+                        color: $ww;
+
+                        span {
+                            position: relative;
+                            color: lighten($blue, 20);
+                            &::after {
+                                content: '';
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:focus {
+                        background-color: $ww !important;
+                        color: $ww !important;
+
+                        span {
+                            position: relative;
+                            color: lighten($blue, 20);
+                            &::after {
+                                content: '';
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -94,6 +127,29 @@ $ww: $lgrey;
         .navbar-button {
             height: 40px;
             border-radius: 10px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .custom-navbar {
+        .container {
+            display: flex;
+            > div {
+                width: 33.33% !important;
+                flex-basis: 33.33% !important;
+            }
+
+            .navbar-menu {
+                display: flex;
+
+                .navbar-start {
+                    column-gap: 1rem;
+                    margin: 0;
+                    width: 100%;
+                    justify-content: center !important;
+                }
+            }
         }
     }
 }
