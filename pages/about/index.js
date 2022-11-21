@@ -9,31 +9,10 @@ import AboutInfo from 'src/sections/about/info';
 import AboutTeam from 'src/sections/about/team';
 import ExtraTeamAbout from 'src/sections/about/extra-team';
 
-import style from 'pages/about/about.module.scss';
 import TeamCards from 'src/components/style.module.scss';
 // import ReactPlayer from 'react-player';
 
 const AboutPage = () => {
-    // const [isPlaying, setIsPlaying] = useState(true);
-    // const {
-    //     aboutContainer,
-    //     headContainer,
-    //     AboutSection,
-    //     iconContainer,
-    //     iconTitle,
-    //     iconContent,
-    //     contentTitle,
-    //     aboutTitle,
-    //     aboutDescription,
-    //     aboutContent,
-    //     iconSection,
-    //     middleContainer,
-    //     multipleColor,
-    //     chatButton,
-    //     content,
-    //     videoBox,
-    // } = style;
-
     // const {
     //     teamContainer,
     //     teamBox,

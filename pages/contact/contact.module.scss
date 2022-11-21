@@ -1,0 +1,51 @@
+@import 'src/scss/bulma-custom-vars';
+@import 'src/scss/vars';
+
+.root {
+    min-width: fit-content;
+    // height: 150%;
+    height: 1px;
+    min-height: calc(100vh - #{$navbar-height});
+}
+
+.inputContainer {
+    input {
+        border: none;
+        border-bottom: 1px solid $blue;
+        border-radius: 0;
+
+        width: 100%;
+
+        &:enabled:focus {
+            box-shadow: 0 2px 0 #c7d2fe;
+        }
+    }
+}
+
+.tAreaContainer {
+    textarea {
+        border: none;
+        border-bottom: 1px solid $blue;
+        border-radius: 0;
+
+        width: 100%;
+
+        &:enabled:focus {
+            box-shadow: 0 2px 0 #c7d2fe;
+        }
+    }
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: end;
+    img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imgContainer {
+        justify-content: center;
+    }
+}

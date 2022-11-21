@@ -2,7 +2,7 @@
 
 import styles from './styles.module.scss';
 
-const { video, interval } = styles;
+const { video } = styles;
 
 const ServicesBanner = () => {
     return (
@@ -10,15 +10,18 @@ const ServicesBanner = () => {
             <div className="container px-2 py-8">
                 <div className="columns is-vcentered">
                     <div className="column">
-                        <h1 className="title has-text-blue is-1 mb-3">We’ ve got your back!</h1>
-                        <p className="has-text-blue is-size-4" style={{ fontWeight: '500' }}>
-                            Metalab provides full spectrum of services to help <br /> you move into the web3 space
-                            seamlessly.
+                        <h1 className="title has-text-blue is-1 mb-3 has-text-centered-mobile">
+                            We’ ve got your back!
+                        </h1>
+                        <p className="has-text-blue is-size-4 has-text-centered-mobile" style={{ fontWeight: '500' }}>
+                            Metalab provides full spectrum of services to help you move into the web3 space seamlessly.
                         </p>
                         <br />
-                        <button className="button is-gra1" type="button">
-                            <b>Let&apos;s chat</b>
-                        </button>
+                        <div className="has-text-centered-mobile">
+                            <button className="button is-gra1" type="button">
+                                <b>Let&apos;s chat</b>
+                            </button>
+                        </div>
                     </div>
 
                     <div className="column">
