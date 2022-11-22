@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from './style.module.scss';
 
-const { container } = styles;
+const { container, iconsImg } = styles;
 
 const valuesData = [
     {
@@ -86,8 +86,8 @@ const AboutData = [
             <div className={container}>
                 {valuesData.map(item => (
                     <div key={item.id} className="flex flex-column align-items-center mb-2">
-                        <img src={item.img} alt="" width="80" />
-                        <h1 className="title has-text-blue has-text-centered mb-6">{item.title}</h1>
+                        <img src={item.img} className={iconsImg} alt="" width="90" />
+                        <h1 className="title has-text-blue is-size-4 has-text-centered p-5">{item.title}</h1>
                     </div>
                 ))}
             </div>

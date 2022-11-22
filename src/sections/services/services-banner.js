@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 const { video } = styles;
@@ -18,9 +19,11 @@ const ServicesBanner = () => {
                         </p>
                         <br />
                         <div className="has-text-centered-mobile">
-                            <button className="button is-gra1" type="button">
+                        <Link href="contact">
+                            <button className="button is-gra1 pr-6 pl-6  has-border-radius-16 " type="button">
                                 <b>Let&apos;s chat</b>
                             </button>
+                            </Link>
                         </div>
                     </div>
 

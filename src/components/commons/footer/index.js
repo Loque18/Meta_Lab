@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import socialMediaData from 'src/static/social-media';
+import Link from 'next/link';
 import style from './footer.module.scss';
 
-const { container } = style;
+const { container} = style;
 
 const Footer = () => {
     return (
@@ -31,12 +32,14 @@ const Footer = () => {
                     </div>
 
                     <div className="column">
-                        <h1 className="title is-5 has-text-blue flex align-items-center">
-                            <span className="icon has-text-blue is-size-5 mr-2">
-                                <i className="far fa-envelope" />
-                            </span>
-                            Get in touch
-                        </h1>
+                        <Link href="contact">
+                            <h1 className='title is-5 has-text-blue flex align-items-center cursor-pointer'>
+                                <span className="icon has-text-blue is-size-5 mr-2">
+                                    <i className="far fa-envelope" />
+                                </span>
+                                Get in touch
+                            </h1>
+                        </Link>
                     </div>
                 </div>
 

@@ -2,6 +2,8 @@
 
 import { Carousel } from 'primereact/carousel';
 
+import Link from 'next/link';
+
 import servicesData from 'src/static/services-data';
 
 import styles from './styles.module.scss';
@@ -80,9 +82,11 @@ const HomeOurServices = () => {
                 <br />
 
                 <div className="flex justify-content-center">
-                    <button type="button" className="button is-medium is-gra1  px-5">
-                        <b>View All</b>
-                    </button>
+                    <Link href="services">
+                        <button type="button" className="button is-medium is-gra1 pr-7 pl-6 has-border-radius-14 has-border-radius-14">
+                            <b>View All</b>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

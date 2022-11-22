@@ -20,7 +20,7 @@ const AboutTeam = () => {
                                     <h1 className="title is-3 has-text-blue has-text-centered is-uppercase">
                                         {member.name}
                                     </h1>
-                                    <h2 className="subtitle is-5 has-text-cyan has-text-centered is-uppercase">
+                                    <h2 className="subtitle is-5 has-text-Iris has-text-centered">
                                         {member.position}
                                     </h2>
                                     <p

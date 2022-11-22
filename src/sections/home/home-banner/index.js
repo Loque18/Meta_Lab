@@ -22,8 +22,8 @@ const HomeBanner = () => {
                         </p>
                         <br />
                         <div className="has-text-centered-mobile">
-                            <Link href="#ourServices">
-                                <button type="button" className="button is-gra1">
+                            <Link href="services">
+                                <button type="button" className="button is-gra1 pr-5 pl-5 has-border-radius-14">
                                     <b>Our Services</b>
                                 </button>
                             </Link>

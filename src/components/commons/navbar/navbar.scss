@@ -59,7 +59,11 @@ $ww: $lgrey;
             &:focus {
                 // background: rgba($white, 1) !important;
                 background: rgba(0, 0, 0, 0) !important;
-                // color: rgba($blue, 0.75) !important;
+                color: rgba(white, 0.75) !important;
+            }
+
+            &:first-child {
+                margin-left: 2rem;
             }
         }
     }

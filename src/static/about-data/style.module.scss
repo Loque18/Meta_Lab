@@ -3,6 +3,10 @@
     justify-content: space-evenly;
 }
 
+.iconsImg:nth-child(1) {
+    width: 6rem;
+}
+
 @media screen and (max-width: 768px) {
     // display max two on mobile
 
