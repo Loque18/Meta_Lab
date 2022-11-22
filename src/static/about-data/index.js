@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from './style.module.scss';
 
-const { container, box } = styles;
+const { container } = styles;
 
 const valuesData = [
     {

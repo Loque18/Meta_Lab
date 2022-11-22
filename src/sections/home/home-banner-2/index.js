@@ -31,7 +31,7 @@ const HomeBanner2 = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            > Learn more about MetaLab
+                            {'>'} Learn more about MetaLab
                         </a>
                     </div>
                 </div>

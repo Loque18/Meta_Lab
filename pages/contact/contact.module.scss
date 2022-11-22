@@ -2,8 +2,6 @@
 @import 'src/scss/vars';
 
 .root {
-    min-width: fit-content;
-    // height: 150%;
     height: 1px;
     min-height: calc(100vh - #{$navbar-height});
 }

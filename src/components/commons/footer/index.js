@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import socialMediaData from 'src/static/social-media';
 import style from './footer.module.scss';
 

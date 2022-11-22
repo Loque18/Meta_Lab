@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import teamData from 'src/static/teamData';
 
 const AboutTeam = () => {

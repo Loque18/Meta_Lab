@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-const { video, root, columns } = styles;
+const { video, root } = styles;
 
 const BannerAbout = () => {
     return (

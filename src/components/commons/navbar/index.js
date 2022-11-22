@@ -7,14 +7,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // import { providers } from '@celeste-js/core/dist/constants';
-import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 // import './navbar.scss';
 
 // import { onConnectError } from 'src/static/notifications-functions';
 // import { open_modal } from 'src/redux/actions';
-
-import modals from 'src/static/app.modals';
 
 const Navbar = () => {
     const router = useRouter();
@@ -29,7 +26,6 @@ const Navbar = () => {
     // const [tokenOnViewport, setTokenOnViewport] = useState(false);
 
     // const { globalReducer } = useSelector(state => state);
-    const dispatch = useDispatch();
 
     const handleHamburgerClick = () => {
         const newValue = !mobileActive;

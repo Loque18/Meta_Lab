@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/media-has-caption */
 import servicesData from 'src/static/services-data';
 
