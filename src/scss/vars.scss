@@ -4,6 +4,7 @@ $blue: #03045e;
 $fuchsia: #ff00ff;
 $cyan: #00ffff;
 $lgrey: #fafafa;
+$Iris: #11bdb4;
 
 $gra1: linear-gradient(90deg, $fuchsia, $cyan);
 $gra2: linear-gradient(90deg, $blue, $cyan);
@@ -13,6 +14,7 @@ $hcolors: (
     fuchsia: $fuchsia,
     cyan: $cyan,
     lgrey: $lgrey,
+    Iris: $Iris
 );
 
 $hgras: (

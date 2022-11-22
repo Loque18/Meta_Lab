@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable @next/next/no-img-element */
 import styles from './styles.module.scss';
 
@@ -24,15 +25,15 @@ const HomeBanner2 = () => {
                             development and brand design to IT solutions, we help you turn your innovative ideas into
                             competitive market-ready solutions.
                         </p>
-
-                        <a
-                            className="has-text-lgrey is-size-7"
-                            href="https://example.com"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            {'>'} Learn more about MetaLab
-                        </a>
+                            <a
+                                className="has-text-lgrey is-size-7"
+                                href="about"
+                                target="_self"
+                                rel="noreferrer"
+                            >
+                                {'>'} Learn more about MetaLab
+                            </a>
+                        
                     </div>
                 </div>
             </div>

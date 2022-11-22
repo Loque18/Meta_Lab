@@ -49,7 +49,7 @@ const ExtraTeamAbout = () => {
                                     <h1 className="title is-5 has-text-blue is-uppercase has-text-centered">
                                         {item.name}
                                     </h1>
-                                    <h2 className="subtitle is-6 has-text-cyan is-capitalized has-text-centered">
+                                    <h2 className="subtitle is-6 has-text-Iris is-capitalized has-text-centered">
                                         {item.position}
                                     </h2>
                                 </div>

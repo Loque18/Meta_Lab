@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 const { video, root } = styles;
@@ -15,9 +16,11 @@ const BannerAbout = () => {
 
                         <br />
                         <div className="has-text-centered-mobile">
-                            <button className="button is-gra1" type="button">
-                                <b>Let&apos;s chat</b>
-                            </button>
+                            <Link href='contact'>
+                                <button className="button is-gra1 pr-6 pl-6 has-border-radius-14" type="button">
+                                    <b>Let&apos;s chat</b>
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
