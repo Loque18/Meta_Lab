@@ -1,22 +1,27 @@
 const servicesData = [
     {
         id: '1',
+        divId: 'smart-contract-development',
         title: '1. Smart Contract Development',
         img: '/Media/noteIcon.png',
         description:
             'Smart Contracts are one of the core components of the Web3. They are programs written and stored on the blockchain so it can be executed automatically when predetermined conditions are met.',
         image: true,
+        thumbnail: '/Media/code.jpeg',
     },
 
     {
         id: '2',
+        divId: 'dapp-development',
         title: '2. Web3 Website  Development',
         video: '/videos/106187-web3-desk.mp4',
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space.',
+        thumbnail: '/M',
     },
     {
         id: '3',
+        divId: 'web3-consulting',
         title: '3. Blockchain & NFT Education',
         video: '/videos/110807-nft-bitcoin-icon-animated.mp4',
         description:
@@ -24,6 +29,7 @@ const servicesData = [
     },
     {
         id: '4',
+        divId: 'nft-consultancy-and-development',
         title: '4. NFT Consultancy And Development',
         video: '/videos/92445-crypto-bitcoin.mp4',
         description:
@@ -31,6 +37,7 @@ const servicesData = [
     },
     {
         id: '5',
+        divId: 'web3-social-media-marketing',
         title: '5. Web3 Social Media Marketing',
         video: '/videos/socialMediaMarketing.mp4',
         description:
@@ -38,6 +45,7 @@ const servicesData = [
     },
     {
         id: '6',
+        divId: 'community-building',
         title: '6. Community Building',
         video: '/videos/91955-social-media-network.mp4',
         description:

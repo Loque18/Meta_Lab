@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Carousel } from 'primereact/carousel';
-
 import Link from 'next/link';
+import { Carousel } from 'primereact/carousel';
 
 import servicesData from 'src/static/services-data';
 
@@ -43,9 +42,13 @@ const HomeOurServices = () => {
                             {`${item.description.substring(0, 80)}...`}
                         </h1>
 
-                        <span className="icon has-text-white">
-                            <i className="fas fa-arrow-right" />
-                        </span>
+                        <Link href={`/services#${item.divId}`} passHref>
+                            <a className="has-text-white" href="r">
+                                <span className="icon ">
+                                    <i className="fas fa-arrow-right" />
+                                </span>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -83,9 +86,12 @@ const HomeOurServices = () => {
 
                 <div className="flex justify-content-center">
                     <Link href="services">
-                        <button type="button" className="button is-medium is-gra1 pr-7 pl-6 has-border-radius-14 has-border-radius-14">
+                        <a
+                            className="button is-medium is-gra1 pr-7 pl-6 has-border-radius-14 has-border-radius-14"
+                            href="r"
+                        >
                             <b>View All</b>
-                        </button>
+                        </a>
                     </Link>
                 </div>
             </div>

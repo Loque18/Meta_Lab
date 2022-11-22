@@ -18,11 +18,16 @@
         z-index: 2;
         left: 0;
         transform: translateX(-50%) translateY(-50%);
-        width: 300px;
+        width: 350px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100px;
+
+        button span {
+            font-size: 5rem;
+            display: flex;
+        }
     }
 
     // transform: rotate(45deg);
@@ -34,6 +39,9 @@
     position: relative;
 
     background-image: var(--bg-img);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     border-radius: 20px;
 }

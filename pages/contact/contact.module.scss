@@ -2,7 +2,7 @@
 @import 'src/scss/vars';
 
 .root {
-    height: 1px;
+    // height: 1px;
     min-height: calc(100vh - #{$navbar-height});
 }
 
@@ -51,5 +51,14 @@
         height: auto;
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
+    }
+
+    .lastPart {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0.5rem;
     }
 }

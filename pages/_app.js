@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <title>{appName}</title>
                 <meta name="description" content={appConfig.description} />
-                <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
             </Head>
 
             <Provider store={store}>{getLayout(<Component {...pageProps} />)}</Provider>

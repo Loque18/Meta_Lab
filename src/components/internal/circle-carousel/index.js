@@ -71,27 +71,37 @@ const CircleCarousel = ({ data, className }) => {
         // calculate rotation for children
     }, [cRef, tt]);
 
+    useEffect(() => {
+        if (!cRef.current) return undefined;
+
+        const interval = setInterval(() => {
+            setTT(tt - 1);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [cRef, tt]);
+
     return (
         <div className={`${className} ${main_container}`} ref={cRef}>
             <div id="btn-container" className={btn_container}>
                 <button
                     type="button"
                     onClick={onLeftClick}
-                    className="unstyled-button has-text-blue is-size-3"
+                    className="unstyled-button has-text-cyan is-size-3  has-bg-bluea"
                     disabled={disabled}
                 >
-                    <span className="icon is-small">
-                        <i className="fas fa-angle-left" />
+                    <span className="icon">
+                        <i className="fal fa-angle-left" />
                     </span>
                 </button>
                 <button
                     type="button"
                     onClick={onRightClick}
-                    className="unstyled-button has-text-blue is-size-3"
+                    className="unstyled-button has-text-cyan is-size-3  has-bg-bluea"
                     disabled={disabled}
                 >
-                    <span className="icon is-small">
-                        <i className="fas fa-angle-right" />
+                    <span className="icon">
+                        <i className="fal fa-angle-right" />
                     </span>
                 </button>
             </div>

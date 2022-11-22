@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -63,7 +64,7 @@ const Navbar = () => {
     return (
         <nav
             className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'} ${
-                !bgColor && router.pathname === '/home' ? 'home' : ''
+                !bgColor && (router.pathname === '/home' || router.pathname === '/contact') ? 'home' : ''
             }`}
             role="navigation"
             aria-label="main navigation"
@@ -71,10 +72,13 @@ const Navbar = () => {
             <div className="container">
                 <div href="https://www.orcania.io" className="navbar-brand  ">
                     <Link href="/home" passHref>
-                        <a className="navbar-item">
+                        <a className="navbar-item" onClick={handleHamburgerClick}>
                             <img
                                 src={
-                                    bgColor || mobileActive || (!bgColor && router.pathname === '/home')
+                                    bgColor ||
+                                    mobileActive ||
+                                    (!bgColor && router.pathname === '/home') ||
+                                    (!bgColor && router.pathname === '/contact')
                                         ? '/Media/Logo-white.png'
                                         : '/Media/Logo-black.png'
                                 }
@@ -86,7 +90,10 @@ const Navbar = () => {
                     <a
                         role="button"
                         className={`navbar-burger  ${burgerActive ? ' is-active ' : ' '} ${
-                            bgColor || burgerActive || (!bgColor && router.pathname === '/home')
+                            bgColor ||
+                            burgerActive ||
+                            (!bgColor && router.pathname === '/home') ||
+                            (!bgColor && router.pathname === '/contact')
                                 ? 'has-text-white'
                                 : 'has-text-blue'
                         }`}
@@ -104,17 +111,26 @@ const Navbar = () => {
                 <div className={`navbar-menu ${mobileActive ? 'is-active ' : ''}`}>
                     <div className="navbar-start">
                         <Link href="/about" passHref>
-                            <a className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}>
+                            <a
+                                className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}
+                                onClick={handleHamburgerClick}
+                            >
                                 <span>About</span>
                             </a>
                         </Link>
                         <Link href="/services" passHref>
-                            <a className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}>
+                            <a
+                                className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}
+                                onClick={handleHamburgerClick}
+                            >
                                 <span>Services</span>
                             </a>
                         </Link>
                         <Link href="/contact" passHref>
-                            <a className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}>
+                            <a
+                                className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}
+                                onClick={handleHamburgerClick}
+                            >
                                 <span>Contact us</span>
                             </a>
                         </Link>{' '}

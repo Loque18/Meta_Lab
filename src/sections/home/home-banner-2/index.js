@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 const { root, imgContainer } = styles;
@@ -25,15 +26,12 @@ const HomeBanner2 = () => {
                             development and brand design to IT solutions, we help you turn your innovative ideas into
                             competitive market-ready solutions.
                         </p>
-                            <a
-                                className="has-text-lgrey is-size-7"
-                                href="about"
-                                target="_self"
-                                rel="noreferrer"
-                            >
+
+                        <Link href="/about" passHref>
+                            <a className="has-text-lgrey is-size-7" href="r">
                                 {'>'} Learn more about MetaLab
                             </a>
-                        
+                        </Link>
                     </div>
                 </div>
             </div>
