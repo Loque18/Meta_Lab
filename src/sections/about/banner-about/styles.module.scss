@@ -17,8 +17,11 @@
     img,
     video {
         position: absolute;
-        top: 0;
-
-        height: 100%;
+        top: -5rem;
+        height: 150%;
     }
+}
+
+.VideoImg {
+    max-width:150%;
 }

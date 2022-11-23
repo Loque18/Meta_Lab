@@ -5,11 +5,13 @@ import { getLayout as getMainLayout } from 'src/layouts/main';
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'react';
 
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 
 import style from './contact.module.scss';
+// import { toast } from 'react-toastify';
 
 const { root, inputContainer, tAreaContainer, imgContainer } = style;
 
@@ -29,13 +31,26 @@ const ContactUs = () => {
             subject: yup.string().required('Subject is required'),
             message: yup.string().required('Message is required'),
         }),
-        onSubmit: values => {
-            // send to db
-            // eslint-disable-next-line no-alert
-            alert(JSON.stringify(values, null, 2));
-        },
-    });
+        onSubmit: async values => {
+            try {
+                const res = await axios({
+                    method: 'POST',
+                    url: 'https://kind-gray-badger-tutu.cyclic.app/api/contact',
+                    data: values,
+                });
 
+                if (res.status === 'success') {
+                    console.log({status: 'success', data: []});
+                }
+                else {
+                    console.log({ status: 'fail', data: { message: 'failed to send the message' } });
+                }
+
+            } catch (err) {
+                console.log({ status: err, message: 'an error has happened' });
+            }
+        }
+    })
     return (
         <section className={root}>
             <div className="container px-5 flex flex-row align-items-center " style={{ height: '100%' }}>
@@ -158,7 +173,7 @@ const ContactUs = () => {
 
                             <br />
                             <div className="has-text-centered-mobile">
-                                <button className="button is-transparent " type="submit">
+                                <button className="button is-transparent" type="submit">
                                     Send
                                 </button>
                             </div>
@@ -170,28 +185,9 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className={Box}>
-                    <div className={contentBoxContainer}></div>
-                </div> */}
-            </div>
-            {/* <div className={contactContentDescription}>
-                <h1 className={contactTitle}>Contact Us</h1>
-                <h2 className={contactText}>
-                    Feel free to contact us anytime. We will get <br /> back to you as soon as we can!
-                </h2>
-            </div> */}
 
-            {/* <div className={contactInformation}>
-                <h3 className={info}>
-                    <i className="far fa-location" /> Location goes here
-                </h3>
-                <h3 className={info}>
-                    <i className="far fa-envelope" /> info@metalab.business
-                </h3>
-                <h3 className={info}>
-                    <i className="far fa-phone" /> 00 971 123 456 789
-                </h3>
-            </div> */}
+            </div>
+            
         </section>
     );
 };

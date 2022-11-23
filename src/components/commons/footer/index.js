@@ -33,9 +33,9 @@ const Footer = () => {
 
                     <div className="column">
                         <Link href="contact">
-                            <h1 className='title is-5 has-text-blue flex align-items-center cursor-pointer'>
+                            <h1 className='title is-5 has-text-blue flex align-items-center cursor-pointer'  style={{ fontWeight: '400' }}>
                                 <span className="icon has-text-blue is-size-5 mr-2">
-                                    <i className="far fa-envelope" />
+                                    <i className="far fa-envelope" ignore-font/>
                                 </span>
                                 Get in touch
                             </h1>

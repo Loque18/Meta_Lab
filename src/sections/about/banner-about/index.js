@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
-const { video, root } = styles;
+const { video, root, VideoImg } = styles;
 
 const BannerAbout = () => {
     return (
@@ -25,9 +25,9 @@ const BannerAbout = () => {
                     </div>
 
                     <div className="column flex justify-content-center">
-                        <div className={` has-bga-cyan ${video}`} style={{ width: '80%' }}>
+                        <div className={` has-bga-cyan ${video}`} style={{ width: '95%'}}>
                             <video autoPlay muted loop>
-                                <source src="/videos/groupWorking.mp4" type="video/mp4" />
+                                <source src="/videos/groupWorking.mp4" className={`${VideoImg}`} type="video/mp4"/>
                             </video>
                         </div>
                     </div>

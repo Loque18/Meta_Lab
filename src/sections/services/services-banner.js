@@ -12,7 +12,7 @@ const ServicesBanner = () => {
                 <div className="columns is-vcentered">
                     <div className="column">
                         <h1 className="title has-text-blue is-1 mb-3 has-text-centered-mobile">
-                            We’ ve got your back!
+                            We’ve got your back!
                         </h1>
                         <p className="has-text-blue is-size-4 has-text-centered-mobile" style={{ fontWeight: '500' }}>
                             Metalab provides full spectrum of services to help you move into the web3 space seamlessly.
