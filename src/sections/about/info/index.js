@@ -11,10 +11,10 @@ const AboutInfo = () => {
                 {AboutData.map(item => {
                     return (
                         <div key={item.id} className="mb-8">
-                            <h1 className="title at has-text-blue has-text-centered mb-6">
+                            <h1 className="title at has-text-blue has-font-airborne has-text-centered mb-6">
                                 <span>{item.title}</span>
                             </h1>
-                            <p className={`is-size-5 has-text-centered has-text-justified-mobile ${textContainer}`}>
+                            <p className={`is-size-5 has-text-centered has-font-airborne has-text-justified-mobile ${textContainer}`}>
                                 {item.body()}
                             </p>
                         </div>

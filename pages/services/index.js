@@ -9,24 +9,6 @@ import FeaturesComponent from 'src/sections/services/features';
 // import Servicestyle from 'pages/services/service.module.scss';
 
 const ServicePage = () => {
-    // const {
-    //     serviceContainer,
-    //     headerService,
-    //     servicesTitle,
-    //     // containerImg,
-    //     serviceContent,
-    //     serviceDescription,
-    //     servicesButton,
-    //     videoBoxHeader,
-    //     middleServiceContainer,
-    //     serviceMiddleContent,
-    //     serviceContentTitle,
-    //     serviceContentDescription,
-    //     wordBreak,
-    //     vestorImg,
-    //     videos,
-    // } = Servicestyle;
-
     return (
         <div>
             <ServicesBanner />

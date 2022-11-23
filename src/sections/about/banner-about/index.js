@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
-const { video, root } = styles;
+const { video, root, VideoImg } = styles;
 
 const BannerAbout = () => {
     return (
@@ -9,7 +9,7 @@ const BannerAbout = () => {
             <div className="container px-2 py-8">
                 <div className="columns is-vcentered">
                     <div className="column">
-                        <h1 className="title has-text-blue is-1 mb-3 has-text-centered-mobile">
+                        <h1 className="title has-text-blue has-font-airborne is-1 mb-3 has-text-centered-mobile">
                             MetaLab is one of the <span className="has-text-cyan">top world Learders</span> of Web3
                             technology.
                         </h1>
@@ -25,9 +25,9 @@ const BannerAbout = () => {
                     </div>
 
                     <div className="column flex justify-content-center">
-                        <div className={` has-bga-cyan ${video}`} style={{ width: '80%' }}>
+                        <div className={` has-bga-cyan ${video}`} style={{ width: '95%'}}>
                             <video autoPlay muted loop>
-                                <source src="/videos/groupWorking.mp4" type="video/mp4" />
+                                <source src="/videos/groupWorking.mp4" className={`${VideoImg}`} type="video/mp4"/>
                             </video>
                         </div>
                     </div>

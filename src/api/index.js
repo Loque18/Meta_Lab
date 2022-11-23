@@ -1,15 +1,20 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // const endpoint = process.env.ENDPOINT1;
 // const endpoint1 = process.env.ENDPOINT;
 
+// const endpoint = 'https://kind-gray-badger-tutu.cyclic.app';
+const endpoint = 'http://localhost:5000';
+
 const api = {
-    get: {
-        items: () => [{ id: 1 }, { id: 2 }, { id: 3 }],
+    contacts: {
+        post: data =>
+            axios({
+                method: 'post',
+                url: `${endpoint}/api/contacts`,
+                data,
+            }),
     },
-    post: {},
-    put: {},
-    delete: {},
 };
 
 export default api;

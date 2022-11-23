@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { Provider } from 'react-redux';
 
-// import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 import store from 'src/redux/store';
 
@@ -23,7 +23,10 @@ function MyApp({ Component, pageProps }) {
                 <meta name="description" content={appConfig.description} />
             </Head>
 
-            <Provider store={store}>{getLayout(<Component {...pageProps} />)}</Provider>
+            <Provider store={store}>
+                <ToastContainer pauseOnHover autoClose={5000} />
+                {getLayout(<Component {...pageProps} />)}
+            </Provider>
         </>
     );
 }

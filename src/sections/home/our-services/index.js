@@ -62,7 +62,7 @@ const HomeOurServices = () => {
                     <span>OUR SERVICES</span>
                 </h1>
                 <br />
-                <h2 className="subtitle has-text-centered has-text-blue" style={{ fontWeight: '500' }}>
+                <h2 className="subtitle has-text-centered has-text-blue">
                     We offer the full spectrum of services to help you move <br /> into the web3 space seamlessly
                 </h2>
 

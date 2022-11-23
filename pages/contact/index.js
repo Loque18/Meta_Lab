@@ -1,22 +1,29 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { toast } from 'react-toastify';
 
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import { getLayout as getMainLayout } from 'src/layouts/main';
 
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import api from 'src/api';
 
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 
 import style from './contact.module.scss';
+// import { toast } from 'react-toastify';
 
 const { root, inputContainer, tAreaContainer, imgContainer, lastPart } = style;
 
 const ContactUs = () => {
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         const { body } = document;
 
@@ -38,14 +45,44 @@ const ContactUs = () => {
         validationSchema: yup.object({
             name: yup.string().required('Name is required'),
             email: yup.string().email('Invalid email address').required('Email is required'),
-            phone: yup.string().required('Phone is required'),
+            phone: yup.string(),
             subject: yup.string().required('Subject is required'),
-            message: yup.string().required('Message is required'),
+            message: yup.string().max(500, 'Message must be less than 500 characters'),
         }),
-        onSubmit: values => {
-            // send to db
-            // eslint-disable-next-line no-alert
-            alert(JSON.stringify(values, null, 2));
+        onSubmit: async values => {
+            setLoading(true);
+            const data = {
+                name: values.name,
+                email: values.email,
+                subject: values.subject,
+            };
+
+            if (values.phone.length > 0) {
+                data.phone = values.phone;
+            }
+
+            if (values.message.length > 0) {
+                data.message = values.message;
+            }
+
+            try {
+                const res = await api.contacts.post(data);
+
+                if (res.data.status === 'success') {
+                    toast.success('Message sent successfully');
+                } else {
+                    toast.error(res.data.data.message);
+                }
+            } catch (err) {
+                if (err.response.status === 429) {
+                    toast.error('Too many requests, please try again later');
+                    return;
+                }
+
+                toast.error('an error has occurred, please try again later');
+            }
+
+            setLoading(false);
         },
     });
 
@@ -180,7 +217,7 @@ const ContactUs = () => {
 
                                 <br />
                                 <div className="has-text-centered-mobile">
-                                    <button className="button is-transparent " type="submit">
+                                    <button className={`button ${loading ? 'is-loading' : ''}`} type="submit">
                                         Send
                                     </button>
                                 </div>

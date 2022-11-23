@@ -13,20 +13,6 @@ import ExtraTeamAbout from 'src/sections/about/extra-team';
 // import ReactPlayer from 'react-player';
 
 const AboutPage = () => {
-    // const {
-    //     teamContainer,
-    //     teamBox,
-    //     cardContent,
-    //     teamName,
-    //     position,
-    //     teamDescription,
-    //     imgTeam,
-    //     boxImg,
-    //     roundImgContainer,
-    //     cardSection,
-    //     Box,
-    //     imgRound,
-    // } = TeamCards;
     return (
         <div>
             <BannerAbout />

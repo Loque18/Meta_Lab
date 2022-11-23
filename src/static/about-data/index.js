@@ -34,7 +34,7 @@ const AboutData = [
         id: '1',
         title: 'What we do',
         body: () => (
-            <p className="has-text-blue" style={{ fontWeight: '500' }}>
+            <p className="has-text-blue" ignore-font>
                 Metalab specializes in web3 consutlancy, NFT projects, smart contract development, blockchain education
                 & tokenomics, web3 social media marketing, community building and metaverse related content and services
                 to help you transition from tranditional web2 experience into web3.
@@ -47,7 +47,7 @@ const AboutData = [
         title: 'Our Vision',
 
         body: () => (
-            <p className="has-text-blue" style={{ fontWeight: '500' }}>
+            <p className="has-text-blue">
                 We believe in a competitive market where organizations push each other through innovative thinking and a
                 unique approach to their market.
                 <br />
@@ -63,7 +63,7 @@ const AboutData = [
         title: 'Our Mission',
 
         body: () => (
-            <p className="has-text-blue" style={{ fontWeight: '500' }}>
+            <p className="has-text-blue" >
                 At Metalab, we aim to help our clients overcome the 2 main obstacles standing in theway of them reaching
                 their highest potential:
                 <br />
