@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
@@ -5,7 +6,8 @@ import { getLayout as getMainLayout } from 'src/layouts/main';
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import axios from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
@@ -40,17 +42,24 @@ const ContactUs = () => {
                 });
 
                 if (res.status === 'success') {
-                    console.log({status: 'success', data: []});
+                    console.log({ status: 'success', data: [] });
+                    toast.success("Success!");
                 }
                 else {
                     console.log({ status: 'fail', data: { message: 'failed to send the message' } });
-                }
+                }   
 
             } catch (err) {
                 console.log({ status: err, message: 'an error has happened' });
+                toast.error("an error has occurred please try again later");
             }
         }
     })
+
+// const notify = () => {
+//     toast.success('message sent')
+// }
+
     return (
         <section className={root}>
             <div className="container px-5 flex flex-row align-items-center " style={{ height: '100%' }}>
@@ -176,6 +185,7 @@ const ContactUs = () => {
                                 <button className="button is-transparent" type="submit">
                                     Send
                                 </button>
+                                <ToastContainer />
                             </div>
                         </form>
                     </div>
@@ -187,7 +197,7 @@ const ContactUs = () => {
                 </div>
 
             </div>
-            
+
         </section>
     );
 };

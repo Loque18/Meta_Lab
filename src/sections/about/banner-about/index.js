@@ -9,7 +9,7 @@ const BannerAbout = () => {
             <div className="container px-2 py-8">
                 <div className="columns is-vcentered">
                     <div className="column">
-                        <h1 className="title has-text-blue is-1 mb-3 has-text-centered-mobile">
+                        <h1 className="title has-text-blue has-font-airborne is-1 mb-3 has-text-centered-mobile">
                             MetaLab is one of the <span className="has-text-cyan">top world Learders</span> of Web3
                             technology.
                         </h1>
