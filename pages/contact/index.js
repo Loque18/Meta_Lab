@@ -43,7 +43,7 @@ const ContactUs = () => {
 
                 if (res.status === 'success') {
                     console.log({ status: 'success', data: [] });
-                    toast.success("Success!");
+                    toast.success("Message has been sent successfully!");
                 }
                 else {
                     console.log({ status: 'fail', data: { message: 'failed to send the message' } });

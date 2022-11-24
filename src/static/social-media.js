@@ -2,8 +2,8 @@ const socialMediaData = [
     {
         id: 1,
         name: 'facebook',
-        logo: () => <i className="fab fa-facebook-f" />,
-        link: 'https://www.facebook.com',
+        logo: () => <i className="fab fa-linkedin" />,
+        link: 'https://www.linkedin.com/company/metalab-llc/',
     },
 
     {
