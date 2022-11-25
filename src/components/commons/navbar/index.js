@@ -19,7 +19,7 @@ const Navbar = () => {
 
     // local state
     const [mobileActive, setMobileActive] = useState(false);
-    const [burgerActive, setBurgerActive] = useState(false);
+    // const [burgerActive, setBurgerActive] = useState(false);
     const [bgColor, setBgColor] = useState(false);
     // const [scrollingDown, setScrollingDown] = useState(false);
 
@@ -31,8 +31,11 @@ const Navbar = () => {
     const handleHamburgerClick = () => {
         const newValue = !mobileActive;
 
-        setBurgerActive(newValue);
         setMobileActive(newValue);
+    };
+
+    const closeMobileMenu = () => {
+        setMobileActive(false);
     };
 
     // const handleOpenWalletsModal = () => {
@@ -54,6 +57,13 @@ const Navbar = () => {
     //     handleHamburgerClick();
     // };
 
+    console.log({
+        c1: bgColor,
+        c2: mobileActive,
+        c4: !bgColor && router.pathname === '/home',
+        c5: !bgColor && router.pathname === '/contact',
+    });
+
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (+window.scrollY > 50) setBgColor(true);
@@ -72,7 +82,7 @@ const Navbar = () => {
             <div className="container">
                 <div href="https://www.orcania.io" className="navbar-brand  ">
                     <Link href="/home" passHref>
-                        <a className="navbar-item" onClick={handleHamburgerClick}>
+                        <a className="navbar-item" onClick={closeMobileMenu}>
                             <img
                                 src={
                                     bgColor ||
@@ -89,9 +99,9 @@ const Navbar = () => {
 
                     <a
                         role="button"
-                        className={`navbar-burger  ${burgerActive ? ' is-active ' : ' '} ${
+                        className={`navbar-burger  ${mobileActive ? ' is-active ' : ' '} ${
                             bgColor ||
-                            burgerActive ||
+                            mobileActive ||
                             (!bgColor && router.pathname === '/home') ||
                             (!bgColor && router.pathname === '/contact')
                                 ? 'has-text-white'
@@ -113,7 +123,7 @@ const Navbar = () => {
                         <Link href="/about" passHref>
                             <a
                                 className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}
-                                onClick={handleHamburgerClick}
+                                onClick={closeMobileMenu}
                             >
                                 <span>About</span>
                             </a>
@@ -121,7 +131,7 @@ const Navbar = () => {
                         <Link href="/services" passHref>
                             <a
                                 className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}
-                                onClick={handleHamburgerClick}
+                                onClick={closeMobileMenu}
                             >
                                 <span>Services</span>
                             </a>
@@ -129,7 +139,7 @@ const Navbar = () => {
                         <Link href="/contact" passHref>
                             <a
                                 className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}
-                                onClick={handleHamburgerClick}
+                                onClick={closeMobileMenu}
                             >
                                 <span>Contact us</span>
                             </a>

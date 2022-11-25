@@ -35,9 +35,9 @@ const AboutData = [
         title: 'What we do',
         body: () => (
             <p className="has-text-blue" ignore-font>
-                Metalab specializes in web3 consutlancy, NFT projects, smart contract development, blockchain education
-                & tokenomics, web3 social media marketing, community building and metaverse related content and services
-                to help you transition from tranditional web2 experience into web3.
+                Our Metalab consultancy team is dedicated to use the newest in WEB3 technologies to help propel your
+                business and establish yourselves as a leading force in your field. This starts with understanding your
+                reality and objectives, putting your organization at the center of your transition to WEB3.
             </p>
         ),
     },
@@ -48,12 +48,13 @@ const AboutData = [
 
         body: () => (
             <p className="has-text-blue">
-                We believe in a competitive market where organizations push each other through innovative thinking and a
-                unique approach to their market.
+                Equity is at the heart of Metalab’s conception.
+                <br />
+                We believe that the human spirit of innovation should never be held back by unattainable resources.
                 <br />
                 <br />
-                We do not believe inparticipation medals, but more importantly, we believe that the human spirit
-                shouldnever be penalized due to lack of expertise or access to funds.
+                By making knowledge and resources accessible to as many people as possible, we will help individuals,
+                organizations, and the societies that they are a part of, achieve their highest potential.
             </p>
         ),
     },
@@ -63,19 +64,9 @@ const AboutData = [
         title: 'Our Mission',
 
         body: () => (
-            <p className="has-text-blue" >
-                At Metalab, we aim to help our clients overcome the 2 main obstacles standing in theway of them reaching
-                their highest potential:
-                <br />
-                <br />
-                <ul style={{ listStylePosition: 'inside', listStyleType: 'disc' }}>
-                    <li>A consumer base that has higher and higher expectations</li>
-                    <li>Technological barriers</li>
-                </ul>
-                <br />
-                We make it our mission to ensure that businesses of all sizes have access to the latest in technological
-                advancements and, most importantly, align these solutions with their existing business model to propel
-                them forward.
+            <p className="has-text-blue">
+                At Metalab, we aim to democratize innovation by making the technological resources and knowledge
+                available to as many people as possible.
             </p>
         ),
     },

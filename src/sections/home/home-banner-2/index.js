@@ -15,16 +15,12 @@ const HomeBanner2 = () => {
                 <div className="columns">
                     <div className="column is-6">
                         <h1 className="title is-2 has-text-lgrey has-text-centered-mobile">
-                            WE TURN IDEAS INTO A
-                            <span className="has-text-cyan">
-                                <br />
-                                COMPETITIVE BUSINESS
-                            </span>
+                            SHIFT YOUR BUSINESS PARADIGM <span className="has-text-cyan">AND INNOVATE TODAY</span>
                         </h1>
                         <p className="has-text-lgrey has-text-justified mb-2">
-                            With over than 10 years of experience in technology, from business strategies to web
-                            development and brand design to IT solutions, we help you turn your innovative ideas into
-                            competitive market-ready solutions.
+                            We assist you in transforming your creative ideas into competitive, market-ready solutions
+                            thanks to our 10 years of experience in business strategies, web development, brand
+                            identity/design, and IT solutions.
                         </p>
 
                         <Link href="/about" passHref>

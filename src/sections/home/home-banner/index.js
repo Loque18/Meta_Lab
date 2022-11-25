@@ -15,10 +15,10 @@ const HomeBanner = () => {
                             <span className="has-text-cyan ignore-font">GATEWAY TO WEB3</span>
                         </h1>
                         <p className="has-text-lgrey has-text-justified has-text-centered-mobile">
-                            Whether you are an individual with an NFT project idea or a business that want to keep up
-                            with the latest technology trends and enter the WEB3 space, we have your back. Our team will
-                            make sure your transition from web2 to web3 is seamless and help you achieve your strategy
-                            and long term goals.
+                            Whether you are a corporation looking to get noticed as a market leader, a business
+                            searching for innovative ways to raise funds to expand your brand without losing equity or
+                            simply an individual with aspirations in the NFT space, Metalab brings the newest Blockchain
+                            & web3 technology to your fingertips.
                         </p>
                         <br />
                         <div className="has-text-centered-mobile">

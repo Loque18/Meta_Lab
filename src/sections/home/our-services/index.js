@@ -63,10 +63,9 @@ const HomeOurServices = () => {
                 </h1>
                 <br />
                 <h2 className="subtitle has-text-centered has-text-blue">
-                    We offer the full spectrum of services to help you move <br /> into the web3 space seamlessly
+                    Metalab is your one-stop shop for all Web3 related services.
                 </h2>
 
-                <br />
                 <br />
 
                 <div className="services-carousel-container">
