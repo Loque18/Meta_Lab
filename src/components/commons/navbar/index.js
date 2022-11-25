@@ -57,13 +57,6 @@ const Navbar = () => {
     //     handleHamburgerClick();
     // };
 
-    console.log({
-        c1: bgColor,
-        c2: mobileActive,
-        c4: !bgColor && router.pathname === '/home',
-        c5: !bgColor && router.pathname === '/contact',
-    });
-
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (+window.scrollY > 50) setBgColor(true);
