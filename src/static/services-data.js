@@ -44,7 +44,7 @@ const servicesData = [
         video: '/videos/socialMediaMarketing.mp4',
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space',
-        thumbnail: '/Media/sv_bg/marketing.jpeg',
+        thumbnail: '/Media/sv_bg/marketing.jpg',
     },
     {
         id: '6',
@@ -53,7 +53,7 @@ const servicesData = [
         video: '/videos/91955-social-media-network.mp4',
         description:
             'Community is the most important components in the web3 space. Our team will help you create, build and manage your community to increase your chances in delivering a successfull project.',
-        thumbnail: '/Media/sv_bg/community.jpeg',
+        thumbnail: '/Media/sv_bg/community.jpg',
     },
 ];
 

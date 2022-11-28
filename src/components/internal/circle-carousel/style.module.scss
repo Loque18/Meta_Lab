@@ -18,15 +18,17 @@
         z-index: 2;
         left: 0;
         transform: translateX(-50%) translateY(-50%);
-        width: 350px;
+        width: 400px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100px;
 
-        button span {
-            font-size: 5rem;
-            display: flex;
+        button {
+            i {
+                font-size: 3.5rem;
+                display: flex;
+            }
         }
     }
 
@@ -50,7 +52,7 @@
 
 @media screen and (max-width: 600px) {
     .main_container {
-        height: 400px;
+        // height: 400px;
 
         .btn_container {
             left: 50%;

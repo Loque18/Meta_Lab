@@ -90,9 +90,7 @@ const CircleCarousel = ({ data, className }) => {
                     className="unstyled-button has-text-cyan is-size-3  has-bg-bluea"
                     disabled={disabled}
                 >
-                    <span className="icon">
-                        <i className="fal fa-angle-left" />
-                    </span>
+                    <i className="pi pi-chevron-left" />
                 </button>
                 <button
                     type="button"
@@ -100,9 +98,7 @@ const CircleCarousel = ({ data, className }) => {
                     className="unstyled-button has-text-cyan is-size-3  has-bg-bluea"
                     disabled={disabled}
                 >
-                    <span className="icon">
-                        <i className="fal fa-angle-right" />
-                    </span>
+                    <i className="pi pi-chevron-right" />
                 </button>
             </div>
             {data.map(({ id, img }) => (

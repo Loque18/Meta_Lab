@@ -22,15 +22,37 @@
     .p-carousel-next-icon {
         font-size: 4rem;
         color: $blue;
+
+        font-weight: lighter;
     }
+
+    // .p-carousel-prev-icon::before {
+    //     content: '.';
+    //     font-family: none;
+    //     display: block;
+    //     background-image: url('/Media/arrowl.svg');
+    //     background-repeat: no-repeat;
+    //     background-size: auto;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     background-position: center;
+    // }
 }
 
 @media screen and (max-width: 768px) {
     .services-carousel-container,
     .carousel-team-container {
+        .p-carousel-prev,
+        .p-carousel-next {
+            width: 2rem !important;
+            height: auto !important;
+        }
+
         .p-carousel-prev-icon,
         .p-carousel-next-icon {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 }
