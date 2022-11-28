@@ -2,24 +2,15 @@
 
 .root {
     min-height: calc(100vh - #{$navbar-height});
+    height: 1px;
 }
 
-.video {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-
+.videoo {
+    height: 450px;
     display: flex;
-    justify-content: center;
 
-    box-shadow: none;
-
-    img,
     video {
-        position: absolute;
-        bottom: -5rem;
-
-        height: 120%;
+        height: 100%;
     }
 }
 
@@ -36,11 +27,21 @@
 }
 
 @media screen and (max-width: 768px) {
+    .root {
+        height: auto;
+    }
+
     .textContainer {
         margin: auto;
     }
 
     .mb {
-        margin-bottom: 0rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .videoo {
+        height: 300px;
+        display: flex;
+        justify-content: center !important;
     }
 }

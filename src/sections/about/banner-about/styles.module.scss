@@ -2,6 +2,7 @@
 
 .root {
     min-height: calc(100vh - #{$navbar-height});
+    height: 1px;
 }
 
 .video {
@@ -22,6 +23,8 @@
     }
 }
 
-.VideoImg {
-    max-width:150%;
+@media screen and (max-width: 768px) {
+    .root {
+        height: auto;
+    }
 }

@@ -6,7 +6,7 @@ const AboutTeam = () => {
         <section>
             <div className="container px-5">
                 <h1 className="title c is-1 has-text-blue is-uppercase has-text-centered mb-8">
-                    <span>Meet our team</span>
+                    <span className="ignore-font">Meet our team</span>
                 </h1>
                 <div className="columns" style={{ columnGap: '2rem' }}>
                     {teamData.map(member => {
@@ -21,7 +21,7 @@ const AboutTeam = () => {
                                         {member.name}
                                     </h1>
                                     <h2 className="subtitle is-5 has-text-Iris has-text-centered">
-                                        {member.position}
+                                        <i>{member.position}</i>
                                     </h2>
                                     <p
                                         className="has-text-blue has-text-justified"

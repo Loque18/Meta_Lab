@@ -21,8 +21,15 @@ import style from './contact.module.scss';
 
 const { root, inputContainer, tAreaContainer, imgContainer, lastPart } = style;
 
+// valid number regex, with country code
+const validNumberRegex = /^(\+?)(\d{1,3})?[-. ]?(\d{3})[-. ]?(\d{3})[-. ]?(\d{4})$/;
+
+// const phoneRegExp =
+//     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 const ContactUs = () => {
     const [loading, setLoading] = useState(false);
+    const [sent, setSent] = useState(false);
 
     useEffect(() => {
         const { body } = document;
@@ -45,7 +52,7 @@ const ContactUs = () => {
         validationSchema: yup.object({
             name: yup.string().required('Name is required'),
             email: yup.string().email('Invalid email address').required('Email is required'),
-            phone: yup.string(),
+            phone: yup.string().matches(validNumberRegex, 'Phone number is not valid'),
             subject: yup.string().required('Subject is required'),
             message: yup.string().max(500, 'Message must be less than 500 characters'),
         }),
@@ -73,6 +80,7 @@ const ContactUs = () => {
                 } else {
                     toast.error(res.data.data.message);
                 }
+                setSent(true);
             } catch (err) {
                 if (err.response.status === 429) {
                     toast.error('Too many requests, please try again later');
@@ -92,8 +100,8 @@ const ContactUs = () => {
 
             <div className="container px-5 py-6" style={{ height: '100%' }}>
                 <div className="mb-8">
-                    <h1 className="title has-text-lgrey is-1 has-text-centered">Contact Us</h1>
-                    <h2 className="has-text-lgrey has-text-centered">
+                    <h1 className="title has-text-lgrey is-1 has-text-centered ignore-font">Contact Us</h1>
+                    <h2 className="has-text-lgrey has-text-centered ignore-font is-size-5">
                         Feel free to contact us anytime. We will get <br /> back to you as soon as we can!
                     </h2>
                 </div>
@@ -217,8 +225,12 @@ const ContactUs = () => {
 
                                 <br />
                                 <div className="has-text-centered-mobile">
-                                    <button className={`button ${loading ? 'is-loading' : ''}`} type="submit">
-                                        Send
+                                    <button
+                                        className={`button ${loading ? 'is-loading' : ''}`}
+                                        type="submit"
+                                        disabled={sent}
+                                    >
+                                        {sent ? 'Message Sent' : 'Send'}
                                     </button>
                                 </div>
                             </form>
@@ -250,7 +262,9 @@ const ContactUs = () => {
                         <span className="icon">
                             <i className="far fa-phone" />
                         </span>
-                      <a href="tel:00971508068440" style={{color: 'white'}}>00971508068440</a>
+                        <a href="tel:00971508068440" style={{ color: 'white' }}>
+                            00971508068440
+                        </a>
                     </h3>
                 </div>
             </div>

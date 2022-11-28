@@ -8,6 +8,7 @@ const servicesData = [
             'Smart Contracts are one of the core components of the Web3. They are programs written and stored on the blockchain so it can be executed automatically when predetermined conditions are met.',
         image: true,
         thumbnail: '/Media/sv_bg/sc.jpeg',
+        align: 'is-justify-content-center',
     },
 
     {
@@ -18,6 +19,7 @@ const servicesData = [
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space.',
         thumbnail: '/Media/sv_bg/code.jpeg',
+        align: 'is-justify-content-flex-start',
     },
     {
         id: '3',
@@ -27,6 +29,7 @@ const servicesData = [
         description:
             'You want to know more about the blockchain and the NFT technologies before investing in? no problem,our experts will provide you and your teams training sessions so you understand better the techonology and the way it will shape our lives in the future.',
         thumbnail: '/Media/sv_bg/nft_edu.png',
+        align: 'is-justify-content-center',
     },
     {
         id: '4',
@@ -36,6 +39,7 @@ const servicesData = [
         description:
             'Our NFT consultants with extensive knowledge in the space will collect your requirements and analyze them to advise you with the best possibilities that suits your needs.',
         thumbnail: '/Media/sv_bg/nft.png',
+        align: 'is-justify-content-flex-start',
     },
     {
         id: '5',
@@ -45,6 +49,7 @@ const servicesData = [
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space',
         thumbnail: '/Media/sv_bg/marketing.jpg',
+        align: 'is-justify-content-flex-end',
     },
     {
         id: '6',
@@ -54,6 +59,7 @@ const servicesData = [
         description:
             'Community is the most important components in the web3 space. Our team will help you create, build and manage your community to increase your chances in delivering a successfull project.',
         thumbnail: '/Media/sv_bg/community.jpg',
+        align: 'is-justify-content-start',
     },
 ];
 
