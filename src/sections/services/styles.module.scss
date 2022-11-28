@@ -1,5 +1,9 @@
 @import 'src/scss/bulma-custom-vars';
 
+.root {
+    min-height: calc(100vh - #{$navbar-height});
+}
+
 .video {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -13,9 +17,9 @@
     img,
     video {
         position: absolute;
-        top: 0;
+        bottom: -5rem;
 
-        height: 100%;
+        height: 120%;
     }
 }
 

@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
-const { video } = styles;
+const { video, root } = styles;
 
 const ServicesBanner = () => {
     return (
-        <section>
+        <section className={root}>
             <div className="container px-2 py-8">
                 <div className="columns is-vcentered">
                     <div className="column">
@@ -20,7 +20,7 @@ const ServicesBanner = () => {
                         <div className="has-text-centered-mobile">
                             <Link href="contact">
                                 <a className="button gra is-gra1 pr-5 pl-5 has-border-radius-14 px-6" href="contact">
-                                    <b>Learn How</b>
+                                    <b>Get noticed as a market leader</b>
                                 </a>
 
                             </Link>

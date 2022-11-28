@@ -12,7 +12,7 @@ const valuesData = [
 
     {
         id: 2,
-        title: 'commitment',
+        title: 'Commitment',
         img: '/Media/handShake.png',
     },
 
