@@ -3,7 +3,7 @@ import socialMediaData from 'src/static/social-media';
 import Link from 'next/link';
 import style from './footer.module.scss';
 
-const { container} = style;
+const { container } = style;
 
 const Footer = () => {
     return (
@@ -22,7 +22,7 @@ const Footer = () => {
                                     href={sm.link}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="has-text-grey is-size-4"
+                                    className="has-text-grey is-size-3 px-2"
                                     style={{ display: 'block' }}
                                 >
                                     <span className="icon has-text-blue">{sm.logo()}</span>
@@ -33,9 +33,12 @@ const Footer = () => {
 
                     <div className="column">
                         <Link href="contact">
-                            <h1 className='title is-5 has-text-blue flex align-items-center cursor-pointer'  style={{ fontWeight: '400' }}>
-                                <span className="icon has-text-blue is-size-5 mr-2">
-                                    <i className="far fa-envelope" ignore-font/>
+                            <h1
+                                className="title is-5 has-text-blue flex align-items-center cursor-pointer "
+                                style={{ fontWeight: '600' }}
+                            >
+                                <span className="icon has-text-blue is-size-4 mr-2">
+                                    <i className="far fa-envelope" ignore-font />
                                 </span>
                                 Get in touch
                             </h1>
@@ -43,7 +46,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <h1 className="has-text-centered is-size-7">© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
+                <h1 className="has-text-centered is-size-6">© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
             </div>
         </footer>
     );

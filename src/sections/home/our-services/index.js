@@ -59,7 +59,7 @@ const HomeOurServices = () => {
         <section className={root}>
             <div className="container px-5 py-6  " style={{ height: '100%' }}>
                 <h1 className="title is-1 has-text-centered has-text-blue c">
-                    <span>OUR SERVICES</span>
+                    <span className="ignore-font">OUR SERVICES</span>
                 </h1>
                 <br />
                 <h2 className="subtitle has-text-centered has-text-blue">
@@ -84,11 +84,8 @@ const HomeOurServices = () => {
                 <br />
 
                 <div className="flex justify-content-center">
-                    <Link href="services">
-                        <a
-                            className="button is-medium is-gra1 pr-7 pl-6 has-border-radius-14 has-border-radius-14"
-                            href="r"
-                        >
+                    <Link href="/services">
+                        <a className="button gra is-gra1 pr-5 pl-5 has-border-radius-14 px-6" href="r">
                             <b>View All</b>
                         </a>
                     </Link>

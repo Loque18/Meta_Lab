@@ -29,7 +29,7 @@
         'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
-*:not(.has-font-din):not(i):not(.pi):not(.has-font-ptmono):not(.ignore-font) {
+*:not(.has-font-din):not(i):not(.pi):not(.has-font-ptmono):not(.ignore-font):not(b):not(h1) {
     @extend .has-font-din;
 }
 
