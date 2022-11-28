@@ -32,7 +32,7 @@ const HomePartners = () => {
                 <div className="columns  is-vcentered">
                     <div className="column is-6 has-bg-fuchsaia">
                         <h1 className="title is-1 has-text-centered has-text-blue c">
-                            <span>OUR PARTNERS</span>
+                            <span className="ignore-font">OUR PARTNERS</span>
                         </h1>
                     </div>
                     <div className="column has-bg-balue">

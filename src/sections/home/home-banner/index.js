@@ -10,7 +10,7 @@ const HomeBanner = () => {
             <div className="container" style={{ height: '100%' }}>
                 <div className="columns is-vcentered is-marginless" style={{ height: '100%' }}>
                     <div className={`column is-6 ${column}`}>
-                        <h1 className="title is-1 has-text-white has-text-centered-mobile ignore-font">
+                        <h1 className="title is-big has-text-white has-text-centered-mobile ignore-font">
                             METALAB, YOUR <br />
                             <span className="has-text-cyan ignore-font">GATEWAY TO WEB3</span>
                         </h1>
@@ -22,10 +22,14 @@ const HomeBanner = () => {
                         </p>
                         <br />
                         <div className="has-text-centered-mobile">
-                            <Link href="services">
-                                <button type="button" className="button is-gra1 pr-5 pl-5 has-border-radius-14">
+                            <Link href="services" passHref>
+                                <a
+                                    type="button"
+                                    className="button gra is-gra1 pr-5 pl-5 has-border-radius-14 "
+                                    href="r"
+                                >
                                     <b>Our Services</b>
-                                </button>
+                                </a>
                             </Link>
                         </div>
                     </div>

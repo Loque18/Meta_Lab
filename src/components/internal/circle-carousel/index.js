@@ -76,7 +76,7 @@ const CircleCarousel = ({ data, className }) => {
 
         const interval = setInterval(() => {
             setTT(tt - 1);
-        }, 5000);
+        }, 5 * 1000);
 
         return () => clearInterval(interval);
     }, [cRef, tt]);
