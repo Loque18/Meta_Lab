@@ -37,6 +37,7 @@
 .imgContainer {
     display: flex;
     justify-content: flex-end;
+
     img {
         max-width: 80%;
     }
@@ -51,14 +52,5 @@
         height: auto;
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
-    }
-
-    .lastPart {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 0.5rem;
     }
 }

@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <h1 className="has-text-centered is-size-7">© 2022 MetaLab, ALL RIGHTS RESERVED.</h1>
+                <h1 className="has-text-centered is-size-7">Metalab LLC , All right reserved</h1>
             </div>
         </footer>
     );

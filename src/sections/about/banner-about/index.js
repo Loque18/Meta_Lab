@@ -17,17 +17,17 @@ const BannerAbout = () => {
                         <br />
                         <div className="has-text-centered-mobile">
                             <Link href='contact'>
-                                <button className="button is-gra1 pr-6 pl-6 has-border-radius-14" type="button">
-                                    <b>Let&apos;s chat</b>
-                                </button>
+                                <a className="button gra is-gra1 pr-5 pl-5 has-border-radius-14 px-6" href="contact">
+                                    <b>Learn How</b>
+                                </a>
                             </Link>
                         </div>
                     </div>
 
                     <div className="column flex justify-content-center">
-                        <div className={` has-bga-cyan ${video}`} style={{ width: '95%'}}>
+                        <div className={` has-bga-cyan ${video}`} style={{ width: '95%' }}>
                             <video autoPlay muted loop>
-                                <source src="/videos/groupWorking.mp4" className={`${VideoImg}`} type="video/mp4"/>
+                                <source src="/videos/groupWorking.mp4" className={`${VideoImg}`} type="video/mp4" />
                             </video>
                         </div>
                     </div>

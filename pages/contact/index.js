@@ -238,7 +238,7 @@ const ContactUs = () => {
                         <span className="icon">
                             <i className="far fa-location" />
                         </span>
-                        Location goes here
+                        Dubai - UAE
                     </h3>
                     <h3 className="has-text-lgrey">
                         <span className="icon">
@@ -250,7 +250,7 @@ const ContactUs = () => {
                         <span className="icon">
                             <i className="far fa-phone" />
                         </span>
-                        00 971 123 456 789
+                       00971508068440
                     </h3>
                 </div>
             </div>
