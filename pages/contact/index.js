@@ -250,7 +250,7 @@ const ContactUs = () => {
                         <span className="icon">
                             <i className="far fa-phone" />
                         </span>
-                       00971508068440
+                      <a href="tel:00971508068440" style={{color: 'white'}}>00971508068440</a>
                     </h3>
                 </div>
             </div>
