@@ -36,7 +36,7 @@ const ServicesBanner = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 
