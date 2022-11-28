@@ -71,15 +71,15 @@ const CircleCarousel = ({ data, className }) => {
         // calculate rotation for children
     }, [cRef, tt]);
 
-    useEffect(() => {
-        if (!cRef.current) return undefined;
+    // useEffect(() => {
+    //     if (!cRef.current) return undefined;
 
-        const interval = setInterval(() => {
-            setTT(tt - 1);
-        }, 5 * 1000);
+    //     const interval = setInterval(() => {
+    //         setTT(tt - 1);
+    //     }, 5 * 1000);
 
-        return () => clearInterval(interval);
-    }, [cRef, tt]);
+    //     return () => clearInterval(interval);
+    // }, [cRef, tt]);
 
     return (
         <div className={`${className} ${main_container}`} ref={cRef}>
