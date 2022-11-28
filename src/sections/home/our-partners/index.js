@@ -4,7 +4,7 @@ import CircleCarousel from 'src/components/internal/circle-carousel';
 
 import styles from './styles.module.scss';
 
-const { root, carousel } = styles;
+const { root, carousel, column } = styles;
 
 const elements = [
     {
@@ -29,8 +29,8 @@ const HomePartners = () => {
     return (
         <section className={root}>
             <div className="container px-5  " style={{ height: '100%' }}>
-                <div className="columns  is-vcentered">
-                    <div className="column is-6 has-bg-fuchsaia">
+                <div className="columns  marginless is-vcentered" style={{ height: '100%' }}>
+                    <div className="column is-6 has-bg-fuchsaia" id={column}>
                         <h1 className="title is-1 has-text-centered has-text-blue c">
                             <span className="ignore-font">OUR PARTNERS</span>
                         </h1>

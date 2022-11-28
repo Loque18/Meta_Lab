@@ -28,7 +28,7 @@ const HomeOurServices = () => {
             <div className={perspective}>
                 <div className={`${boxesContainer} has-border-radius-20`}>
                     <div className={`${cardBox} ${frontFace}  p-2 `}>
-                        <img src="https://picsum.photos/300" alt="service" />
+                        <img src={item.thumbnail} alt="service" />
                         <h1 className="title has-text-lgrey is-5 has-text-centered">
                             {item.title.substring(3, item.title.length)}
                         </h1>

@@ -3,11 +3,11 @@ const servicesData = [
         id: '1',
         divId: 'smart-contract-development',
         title: '1. Smart Contract Development',
-        img: '/Media/noteIcon.png',
+        video: '/videos/87592-signature.mp4',
         description:
             'Smart Contracts are one of the core components of the Web3. They are programs written and stored on the blockchain so it can be executed automatically when predetermined conditions are met.',
         image: true,
-        thumbnail: '/Media/code.jpeg',
+        thumbnail: '/Media/sv_bg/sc.jpeg',
     },
 
     {
@@ -17,7 +17,7 @@ const servicesData = [
         video: '/videos/106187-web3-desk.mp4',
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space.',
-        thumbnail: '/M',
+        thumbnail: '/Media/sv_bg/code.jpeg',
     },
     {
         id: '3',
@@ -26,6 +26,7 @@ const servicesData = [
         video: '/videos/110807-nft-bitcoin-icon-animated.mp4',
         description:
             'You want to know more about the blockchain and the NFT technologies before investing in? no problem,our experts will provide you and your teams training sessions so you understand better the techonology and the way it will shape our lives in the future.',
+        thumbnail: '/Media/sv_bg/nft_edu.png',
     },
     {
         id: '4',
@@ -34,6 +35,7 @@ const servicesData = [
         video: '/videos/92445-crypto-bitcoin.mp4',
         description:
             'Our NFT consultants with extensive knowledge in the space will collect your requirements and analyze them to advise you with the best possibilities that suits your needs.',
+        thumbnail: '/Media/sv_bg/nft.png',
     },
     {
         id: '5',
@@ -42,6 +44,7 @@ const servicesData = [
         video: '/videos/socialMediaMarketing.mp4',
         description:
             'From brand strategy and ideation to content creation and promotion. We have a full team of web3 expert media specialists and designers ready to take your brand to next level in the web3 space',
+        thumbnail: '/Media/sv_bg/marketing.jpeg',
     },
     {
         id: '6',
@@ -50,6 +53,7 @@ const servicesData = [
         video: '/videos/91955-social-media-network.mp4',
         description:
             'Community is the most important components in the web3 space. Our team will help you create, build and manage your community to increase your chances in delivering a successfull project.',
+        thumbnail: '/Media/sv_bg/community.jpeg',
     },
 ];
 
