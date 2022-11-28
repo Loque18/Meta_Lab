@@ -76,7 +76,6 @@ const HomeOurServices = () => {
                         responsiveOptions={responsiveOptions}
                         itemTemplate={itemTemplate}
                         circular
-                        autoplayInterval={10000}
                     />
                 </div>
 
