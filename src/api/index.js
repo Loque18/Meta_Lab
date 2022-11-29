@@ -8,11 +8,11 @@ const endpoint = 'https://kind-gray-badger-tutu.cyclic.app';
 
 const api = {
     contacts: {
-        post: data =>
-            axios({
-                method: 'post',
-                url: `${endpoint}/api/contacts`,
-                data,
+        post: (data, recaptchaCode) =>
+            axios.post(`${endpoint}/api/contacts`, data, {
+                headers: {
+                    'g-recaptcha-response': recaptchaCode,
+                },
             }),
     },
 };

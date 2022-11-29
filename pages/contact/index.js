@@ -67,7 +67,6 @@ const ContactUs = () => {
                 name: values.name,
                 email: values.email,
                 subject: values.subject,
-                recaptcha: values.recaptcha,
             };
             if (values.phone.length > 0) {
                 data.phone = values.phone;
@@ -76,7 +75,7 @@ const ContactUs = () => {
                 data.message = values.message;
             }
             try {
-                const res = await api.contacts.post(data);
+                const res = await api.contacts.post(data, values.recaptcha);
                 if (res.data.status === 'success') {
                     toast.success('Message sent successfully');
                 } else {
