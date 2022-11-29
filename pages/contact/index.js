@@ -224,6 +224,9 @@ const ContactUs = () => {
                                 </div>
 
                                 <br />
+                                <div className="g-recaptcha" data-sitekey="6Lc2vT8jAAAAACSiScifnXeoB0ck-qMFLgTU3eh6" />
+
+                                <br />
                                 <div className="has-text-centered-mobile">
                                     <button
                                         className={`button ${loading ? 'is-loading' : ''}`}
