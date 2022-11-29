@@ -38,7 +38,7 @@ const Footer = () => {
                                 style={{ fontWeight: '600' }}
                             >
                                 <span className="icon has-text-blue is-size-4 mr-2">
-                                    <i className="far fa-envelope" ignore-font />
+                                    <i className="far fa-envelope" />
                                 </span>
                                 Get in touch
                             </h1>

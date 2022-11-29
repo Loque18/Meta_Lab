@@ -2,11 +2,12 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { useEffect, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import { getLayout as getMainLayout } from 'src/layouts/main';
@@ -31,6 +32,8 @@ const ContactUs = () => {
     const [loading, setLoading] = useState(false);
     const [sent, setSent] = useState(false);
 
+    const recaptchaRef = createRef(null);
+
     useEffect(() => {
         const { body } = document;
 
@@ -48,6 +51,7 @@ const ContactUs = () => {
             phone: '',
             subject: '',
             message: '',
+            recaptcha: '',
         },
         validationSchema: yup.object({
             name: yup.string().required('Name is required'),
@@ -55,6 +59,7 @@ const ContactUs = () => {
             phone: yup.string().matches(validNumberRegex, 'Phone number is not valid'),
             subject: yup.string().required('Subject is required'),
             message: yup.string().max(500, 'Message must be less than 500 characters'),
+            recaptcha: yup.string().required('Please verify that you are not a robot'),
         }),
         onSubmit: async values => {
             setLoading(true);
@@ -62,19 +67,16 @@ const ContactUs = () => {
                 name: values.name,
                 email: values.email,
                 subject: values.subject,
+                recaptcha: values.recaptcha,
             };
-
             if (values.phone.length > 0) {
                 data.phone = values.phone;
             }
-
             if (values.message.length > 0) {
                 data.message = values.message;
             }
-
             try {
                 const res = await api.contacts.post(data);
-
                 if (res.data.status === 'success') {
                     toast.success('Message sent successfully');
                 } else {
@@ -86,13 +88,15 @@ const ContactUs = () => {
                     toast.error('Too many requests, please try again later');
                     return;
                 }
-
                 toast.error('an error has occurred, please try again later');
             }
-
             setLoading(false);
         },
     });
+
+    const verifyCallback = value => {
+        if (value) formik.setFieldValue('recaptcha', value);
+    };
 
     return (
         <section className={`${root} has-bg-gra2`}>
@@ -224,7 +228,22 @@ const ContactUs = () => {
                                 </div>
 
                                 <br />
-                                <div className="g-recaptcha" data-sitekey="6Lc2vT8jAAAAACSiScifnXeoB0ck-qMFLgTU3eh6" />
+
+                                <div className="field">
+                                    <div className="control">
+                                        <ReCAPTCHA
+                                            ref={recaptchaRef}
+                                            sitekey="6LdUL0MjAAAAALWSBq6EureJvvtCDw8OBnIn_jKy"
+                                            size="normal"
+                                            onChange={verifyCallback}
+                                        />
+                                        {formik.touched.recaptcha && formik.errors.recaptcha ? (
+                                            <small id="username2-help" className="p-error">
+                                                {formik.errors.recaptcha}
+                                            </small>
+                                        ) : null}
+                                    </div>
+                                </div>
 
                                 <br />
                                 <div className="has-text-centered-mobile">

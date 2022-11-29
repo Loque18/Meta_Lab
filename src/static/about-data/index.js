@@ -34,7 +34,7 @@ const AboutData = [
         id: '1',
         title: 'What we do',
         body: () => (
-            <p className="has-text-blue" ignore-font>
+            <p className="has-text-blue">
                 Our Metalab consultancy team is dedicated to use the newest in WEB3 technologies to help propel your
                 business and establish yourselves as a leading force in your field. This starts with understanding your
                 reality and objectives, putting your organization at the center of your transition to WEB3.

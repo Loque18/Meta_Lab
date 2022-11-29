@@ -20,11 +20,17 @@ const AboutTeam = () => {
                                     <h1 className="title is-3 has-text-blue has-text-centered is-uppercase">
                                         {member.name}
                                     </h1>
-                                    <h2 className="subtitle is-5 has-text-Iris has-text-centered">
+                                    <a
+                                        href={member.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="subtitle is-5 has-text-Iris has-text-centered"
+                                        style={{ display: 'block' }}
+                                    >
                                         <i>{member.position}</i>
-                                    </h2>
+                                    </a>
                                     <p
-                                        className="has-text-blue has-text-justified"
+                                        className="has-text-blue has-text-justified is-hidden"
                                         style={{
                                             lineHeight: '1.1rem',
                                         }}

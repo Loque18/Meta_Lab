@@ -13,14 +13,6 @@ const elements = [
     },
     {
         id: 2,
-        img: '/Media/soundtrack.png',
-    },
-    {
-        id: 3,
-        img: '/Media/triblox.jpeg',
-    },
-    {
-        id: 4,
         img: '/Media/orcania.png',
     },
 ];

@@ -7,7 +7,7 @@ import { getLayout as getMainLayout } from 'src/layouts/main';
 import BannerAbout from 'src/sections/about/banner-about';
 import AboutInfo from 'src/sections/about/info';
 import AboutTeam from 'src/sections/about/team';
-import ExtraTeamAbout from 'src/sections/about/extra-team';
+// import ExtraTeamAbout from 'src/sections/about/extra-team';
 
 // import TeamCards from 'src/components/style.module.scss';
 // import ReactPlayer from 'react-player';
@@ -18,7 +18,7 @@ const AboutPage = () => {
             <BannerAbout />
             <AboutInfo />
             <AboutTeam />
-            <ExtraTeamAbout />
+            {/* <ExtraTeamAbout /> */}
         </div>
     );
 };
