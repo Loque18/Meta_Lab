@@ -17,18 +17,21 @@ const AboutTeam = () => {
                                 </div>
 
                                 <div>
-                                    <h1 className="title is-3 has-text-blue has-text-centered is-uppercase">
-                                        {member.name}
-                                    </h1>
-                                    <a
-                                        href={member.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="subtitle is-5 has-text-Iris has-text-centered"
-                                        style={{ display: 'block' }}
-                                    >
+                                    <div className="">
+                                        <a href={member.url} target="_blank" rel="noreferrer" className="">
+                                            {' '}
+                                            <h1 className="title is-3 has-text-blue has-text-centered is-uppercase flex align-items-center justify-content-center">
+                                                {member.name} &nbsp;
+                                                <span className="has-text-blue is-size-5">
+                                                    <i className="fab fa-linkedin" />
+                                                </span>
+                                            </h1>
+                                        </a>
+                                    </div>
+
+                                    <div className="subtitle is-5 has-text-Iris has-text-centered">
                                         <i>{member.position}</i>
-                                    </a>
+                                    </div>
                                     <p
                                         className="has-text-blue has-text-justified is-hidden"
                                         style={{
