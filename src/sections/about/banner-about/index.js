@@ -9,11 +9,11 @@ const BannerAbout = () => {
             <div className="container px-2" style={{ height: '100%' }}>
                 <div className="columns is-vcentered" style={{ height: '100%' }}>
                     <div className="column is-7">
-                        <h1 className="title is-big has-text-blue has-font-airborne  has-text-centered-mobile ignore-font">
+                        <h1 className="title is-big has-text-blue has-font-airborne  has-text-centered-mobile ignore-font is-uppercase">
                             Metalab&apos;s unique approach to web3
                         </h1>
                         <h1 className="subtitle is-3 has-text-weight-bold has-text-cyan has-font-airborne has-text-centered-mobile ignore-font">
-                            It&apos;s not about web3, it&apos;s about you
+                            It&apos;s not about web3, it&apos;s about <span className=" ignore-font"> YOU</span>
                         </h1>
 
                         <br />

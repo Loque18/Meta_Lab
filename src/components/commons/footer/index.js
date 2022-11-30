@@ -7,15 +7,16 @@ const { container } = style;
 
 const Footer = () => {
     return (
-        <footer className="footer pb-6">
+        <footer className="footer py-2">
             <div className="container">
                 <div className={`columns ${container}`}>
                     <div className="column">
                         <img src="/Media/Logo-black.png" alt="" width="200" />
+                        <h1 className="is-size-6">Metalab LLC , All right reserved</h1>
                     </div>
 
                     <div className="column">
-                        <div className="flex" style={{ columnGap: '1rem' }}>
+                        <div className="flex is-align-items-center" style={{ columnGap: '1rem' }}>
                             {socialMediaData.map(sm => (
                                 <a
                                     key={sm.id}
@@ -37,7 +38,7 @@ const Footer = () => {
                                 className="title is-5 has-text-blue flex align-items-center cursor-pointer "
                                 style={{ fontWeight: '600' }}
                             >
-                                <span className="icon has-text-blue is-size-4 mr-2">
+                                <span className="icon has-text-blue is-size-3 mr-2">
                                     <i className="far fa-envelope" />
                                 </span>
                                 Get in touch
@@ -45,8 +46,6 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-
-                <h1 className="has-text-centered is-size-6">Metalab LLC , All right reserved</h1>
             </div>
         </footer>
     );
