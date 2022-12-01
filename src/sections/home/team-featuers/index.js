@@ -20,7 +20,7 @@ const TeamExperienceComponent = () => {
 
                     {cards.map(card => (
                         <div className={`box has-border-radius-20 ${item} m-0`}>
-                            <div className="flex flex-column justify-content-center">
+                            <div className="">
                                 <div className="flex justify-content-center">
                                     <img src={card.img} alt="" width="80" className={img1} />
                                     <img src={card.hoverImg} alt="" width="80" className={img2} />
