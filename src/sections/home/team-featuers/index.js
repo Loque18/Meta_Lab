@@ -28,11 +28,11 @@ const TeamExperienceComponent = () => {
                                 <br />
                                 <h2 className="title is-5 has-text-centered mb-0 has-text-blue">{card.title}</h2>
                                 <br />
-                                <p className="has-text-centered has-text-blue ">
+                                <div className="has-text-centered has-text-blue ">
                                     {typeof card.cardDescription === 'string'
                                         ? card.cardDescription
                                         : card.cardDescription()}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     ))}
