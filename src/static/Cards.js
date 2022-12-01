@@ -1,7 +1,7 @@
 const Cards = [
     {
         id: 1,
-        img: '/Media/handShake.png',
+        img: '/Media/icons-02.svg',
         title: 'An Enhanced Customer Experience',
         cardDescription:
             'Create distinctive customer experiences to demonstrate to your customers that there is more to your brand than meets the eye. It’s about the experience, not the transaction.',
@@ -9,7 +9,7 @@ const Cards = [
 
     {
         id: 2,
-        img: '/Media/Setting.png',
+        img: '/Media/icons-04.svg',
         title: 'Raising funds via brand identity',
         cardDescription: () => (
             <p className="has-text-centered has-text-lgrey">
@@ -22,7 +22,7 @@ const Cards = [
 
     {
         id: 3,
-        img: '/Media/shield.png',
+        img: '/Media/icons-05.svg',
         title: 'Expand your digital footprint through the Metaverse',
         cardDescription:
             'Increase sales by creating an immersive environment for your customers allowing them to experience your offering at the fullest. A digital gateway built on a multi-dimensional economicinfrastructure is at your fingertips.',
