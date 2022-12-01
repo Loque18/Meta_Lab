@@ -1,3 +1,9 @@
+@import 'src/scss/vars';
+
+.img2 {
+    display: none;
+}
+
 .root {
     height: 1px;
     min-height: 120vh;
@@ -14,8 +20,6 @@
             flex-direction: column;
             justify-content: space-evenly;
 
-            // background-color: red !important;
-
             flex-grow: 1;
             flex-basis: 0;
             row-gap: 1rem;
@@ -23,14 +27,30 @@
 
             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
 
-            &:nth-child(2) {
-                height: unset !important;
+            &:hover {
+                background: $gra2 !important;
 
-                flex-grow: 1.2;
-                // flex-shrink: 1;
+                h2,
+                p {
+                    color: white !important;
+                }
 
-                padding: 4rem 0.5rem;
+                .img1 {
+                    display: none;
+                }
+                .img2 {
+                    display: block;
+                }
             }
+
+            // &:nth-child(2) {
+            //     height: unset !important;
+
+            //     flex-grow: 1.2;
+            //     // flex-shrink: 1;
+
+            //     padding: 4rem 0.5rem;
+            // }
         }
     }
 }

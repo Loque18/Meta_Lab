@@ -3,22 +3,41 @@ import cards from 'src/static/Cards';
 
 import styles from './teamf.module.scss';
 
-const { root, container, item } = styles;
+const { root, container, item, img1, img2 } = styles;
 
 const TeamExperienceComponent = () => {
     return (
         <section className={root}>
             <div className="container px-5 " style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
                 <div className={container}>
-                    <div className={`box has-border-radius-20 ${item} m-0`}>
+                    {/* <div className={`box has-border-radius-20 ${item} m-0`}>
                         <div className="flex justify-content-center">
                             <img src={cards[0].img} alt="" width="80" />
                         </div>
                         <h2 className="title is-5 has-text-centered mb-0 has-text-blue">{cards[0].title}</h2>
                         <p className="has-text-centered has-text-blue ">{cards[0].cardDescription}</p>
-                    </div>
+                    </div> */}
 
-                    <div className={`box has-bg-gra2 has-border-radius-20 ${item} m-0`}>
+                    {cards.map(card => (
+                        <div className={`box has-border-radius-20 ${item} m-0`}>
+                            <div className="flex flex-column justify-content-center">
+                                <div className="flex justify-content-center">
+                                    <img src={card.img} alt="" width="80" className={img1} />
+                                    <img src={card.hoverImg} alt="" width="80" className={img2} />
+                                </div>
+                                <br />
+                                <h2 className="title is-5 has-text-centered mb-0 has-text-blue">{card.title}</h2>
+                                <br />
+                                <p className="has-text-centered has-text-blue ">
+                                    {typeof card.cardDescription === 'string'
+                                        ? card.cardDescription
+                                        : card.cardDescription()}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+
+                    {/* <div className={`box has-bg-gra2 has-border-radius-20 ${item} m-0`}>
                         <div className="flex justify-content-center">
                             <img src={cards[1].img} alt="" width="95" />
                         </div>
@@ -32,7 +51,7 @@ const TeamExperienceComponent = () => {
                         </div>
                         <h2 className="title is-5 has-text-centered mb-0 has-text-blue">{cards[2].title}</h2>
                         <p className="has-text-centered has-text-blue ">{cards[2].cardDescription}</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
