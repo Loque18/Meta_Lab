@@ -9,7 +9,7 @@ const HomeBanner2 = () => {
     return (
         <section className={`${root} has-bg-gra2`}>
             <div className={`${imgContainer} is-hidden-mobile`}>
-                <img src="/Media/hand-phone.png" alt="" />
+                <img src="/Media/hand-phone.webp" alt="" />
             </div>
             <div className="container px-5" style={{ height: '100%' }}>
                 <div className="columns" style={{ height: '100%' }}>

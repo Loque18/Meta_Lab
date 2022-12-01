@@ -9,11 +9,11 @@ const { root, carousel, column } = styles;
 const elements = [
     {
         id: 1,
-        img: '/Media/disruptive.png',
+        img: '/Media/disruptive.webp',
     },
     {
         id: 2,
-        img: '/Media/orcania.png',
+        img: '/Media/orcania.webp',
     },
 ];
 

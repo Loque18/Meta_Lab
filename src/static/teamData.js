@@ -1,7 +1,7 @@
 const teamData = [
     {
         id: 1,
-        image: '/Media/team.jpeg',
+        image: '/Media/team.webp',
         name: 'Abbas Ahmad',
         position: 'co-founder & Managing director',
         url: 'https://www.linkedin.com/in/abbas-ahmad-c-bb38ba255/',
@@ -11,7 +11,7 @@ const teamData = [
 
     {
         id: 2,
-        image: '/Media/teamcard2.jpeg',
+        image: '/Media/teamcard2.webp',
         name: 'Jeff Reda',
         position: 'Partner',
         url: 'https://www.linkedin.com/in/jaafer-reda-633ba1107/',
@@ -21,7 +21,7 @@ const teamData = [
 
     {
         id: 3,
-        image: '/Media/teamcard3.jpeg',
+        image: '/Media/teamcard3.webp',
         name: 'Youssef Youssef',
         position: 'co-founder & Business development director',
         url: 'https://www.linkedin.com/in/youssef-youssef-1898772a/',

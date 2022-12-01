@@ -7,25 +7,25 @@ const valuesData = [
     {
         id: 1,
         title: 'Agility',
-        img: '/Media/sprintDoll.png',
+        img: '/Media/sprintDoll.webp',
     },
 
     {
         id: 2,
         title: 'Commitment',
-        img: '/Media/handShake.png',
+        img: '/Media/handShake.webp',
     },
 
     {
         id: 3,
         title: 'Integrity',
-        img: '/Media/shield.png',
+        img: '/Media/shield.webp',
     },
 
     {
         id: 4,
         title: 'Innovation',
-        img: '/Media/Light.png',
+        img: '/Media/Light.webp',
     },
 ];
 

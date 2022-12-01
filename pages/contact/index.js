@@ -259,7 +259,7 @@ const ContactUs = () => {
                     </div>
                     <div className="column">
                         <div className={imgContainer}>
-                            <img src="/Media/desktopIcon.png" alt="icon.png" />
+                            <img src="/Media/desktopIcon.webp" alt="" />
                         </div>
                     </div>
                 </div>

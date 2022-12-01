@@ -19,7 +19,7 @@ const TeamExperienceComponent = () => {
                     </div> */}
 
                     {cards.map(card => (
-                        <div className={`box has-border-radius-20 ${item} m-0`}>
+                        <div className={`box has-border-radius-20 ${item} m-0`} key={card.id}>
                             <div className="">
                                 <div className="flex justify-content-center">
                                     <img src={card.img} alt="" width="80" className={img1} />
