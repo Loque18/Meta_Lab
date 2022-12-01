@@ -14,9 +14,11 @@ const AboutInfo = () => {
                             <h1 className="title at has-text-blue has-font-airborne has-text-centered mb-6">
                                 <span>{item.title}</span>
                             </h1>
-                            <p className={`is-size-5 has-text-centered has-font-airborne has-text-justified-mobile ${textContainer}`}>
+                            <div
+                                className={`is-size-5 has-text-centered has-font-airborne has-text-justified-mobile ${textContainer}`}
+                            >
                                 {item.body()}
-                            </p>
+                            </div>
                         </div>
                     );
                 })}

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import { getLayout as getMainLayout } from 'src/layouts/main';
 
@@ -6,7 +8,6 @@ import TeamExperienceComponent from 'src/sections/home/team-featuers';
 import HomeBanner2 from 'src/sections/home/home-banner-2';
 import HomeOurServices from 'src/sections/home/our-services';
 import HomePartners from 'src/sections/home/our-partners';
-import { useEffect } from 'react';
 
 const Home = () => {
     useEffect(() => {
