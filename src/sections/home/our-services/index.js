@@ -75,7 +75,6 @@ const HomeOurServices = () => {
                         numScroll={3}
                         responsiveOptions={responsiveOptions}
                         itemTemplate={itemTemplate}
-                        circular
                     />
                 </div>
 
