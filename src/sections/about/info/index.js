@@ -7,7 +7,7 @@ const { textContainer } = styles;
 const AboutInfo = () => {
     return (
         <section>
-            <div className="container px-5">
+            <div className="container px-5 pt-8">
                 {AboutData.map(item => {
                     return (
                         <div key={item.id} className="mb-8">

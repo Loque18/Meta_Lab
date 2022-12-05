@@ -71,7 +71,7 @@ $corners: 'top', 'right', 'bottom', 'left';
 
         &:focus {
             background-color: lighten($color, 10) !important;
-            box-shadow: 0 0 0 0.125em rgba(rgb(0, 255, 213), 0.5) !important;
+            box-shadow: none !important;
         }
     }
 

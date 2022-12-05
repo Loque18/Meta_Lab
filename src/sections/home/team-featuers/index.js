@@ -3,7 +3,7 @@ import cards from 'src/static/Cards';
 
 import styles from './teamf.module.scss';
 
-const { root, container, item, img1, img2 } = styles;
+const { root, container, item, img1, img2, pp } = styles;
 
 const TeamExperienceComponent = () => {
     return (
@@ -28,7 +28,7 @@ const TeamExperienceComponent = () => {
                                 <br />
                                 <h2 className="title is-5 has-text-centered mb-0 has-text-blue">{card.title}</h2>
                                 <br />
-                                <div className="has-text-centered has-text-blue ">
+                                <div className={`has-text-centered has-text-blue ${pp}`}>
                                     {typeof card.cardDescription === 'string'
                                         ? card.cardDescription
                                         : card.cardDescription()}

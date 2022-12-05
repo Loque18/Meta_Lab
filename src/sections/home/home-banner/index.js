@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 import styles from './style.module.scss';
 
@@ -9,7 +8,8 @@ const HomeBanner = () => {
     return (
         <section className={bg}>
             <div className={bgContainer}>
-                <Image src="/Media/hero.webp" alt="hero" layout="fill" objectFit="cover" priority />
+                {/* <img src="/Media/hero.png" alt="hero" /> */}
+                {/* <Image src="/Media/hero.png" alt="hero" layout="fill" objectFit="cover" priority /> */}
             </div>
             <div className="container" style={{ height: '100%' }}>
                 <div className="columns is-vcentered is-marginless" style={{ height: '100%' }}>

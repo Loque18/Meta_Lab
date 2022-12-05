@@ -115,7 +115,7 @@ const Navbar = () => {
                     <div className="navbar-start">
                         <Link href="/about" passHref>
                             <a
-                                className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}
+                                className={`navbar-item is-size-5 ${router.pathname === '/about' ? 'is-active ' : ''}`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>About</span>
@@ -123,7 +123,9 @@ const Navbar = () => {
                         </Link>
                         <Link href="/services" passHref>
                             <a
-                                className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}
+                                className={`navbar-item is-size-5 ${
+                                    router.pathname === '/services' ? 'is-active' : ''
+                                }`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>Services</span>
@@ -131,7 +133,7 @@ const Navbar = () => {
                         </Link>
                         <Link href="/contact" passHref>
                             <a
-                                className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}
+                                className={`navbar-item is-size-5 ${router.pathname === '/contact' ? 'is-active' : ''}`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>Contact us</span>
