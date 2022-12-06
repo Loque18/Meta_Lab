@@ -67,7 +67,7 @@ const Navbar = () => {
     return (
         <nav
             className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'} ${
-                !bgColor && (router.pathname === '/home' || router.pathname === '/contact') ? 'home' : ''
+                !bgColor && router.pathname ? 'home' : ''
             }`}
             role="navigation"
             aria-label="main navigation"
@@ -76,30 +76,13 @@ const Navbar = () => {
                 <div href="https://www.orcania.io" className="navbar-brand  ">
                     <Link href="/home" passHref>
                         <a className="navbar-item" onClick={closeMobileMenu}>
-                            <img
-                                src={
-                                    bgColor ||
-                                    mobileActive ||
-                                    (!bgColor && router.pathname === '/home') ||
-                                    (!bgColor && router.pathname === '/contact')
-                                        ? '/Media/Logo-white.png'
-                                        : '/Media/Logo-black.png'
-                                }
-                                alt="Metalab Logo"
-                            />
+                            <img src="/Media/Logo-white.png" alt="Metalab Logo" />
                         </a>
                     </Link>
 
                     <a
                         role="button"
-                        className={`navbar-burger  ${mobileActive ? ' is-active ' : ' '} ${
-                            bgColor ||
-                            mobileActive ||
-                            (!bgColor && router.pathname === '/home') ||
-                            (!bgColor && router.pathname === '/contact')
-                                ? 'has-text-white'
-                                : 'has-text-blue'
-                        }`}
+                        className={`navbar-burger  ${mobileActive ? ' is-active ' : ' '} has-text-white`}
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample"
