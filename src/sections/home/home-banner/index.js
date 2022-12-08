@@ -5,10 +5,14 @@ import styles from './style.module.scss';
 const { bg, column, bgContainer } = styles;
 
 const HomeBanner = () => {
+    const onLoadOrCached = () => {
+        console.log('onLoadOrCached');
+    };
+
     return (
         <section className={bg}>
             <div className={bgContainer}>
-                {/* <img src="/Media/hero.png" alt="hero" /> */}
+                <img src="/Media/hero.png" alt="hero" onLoad={onLoadOrCached} />
                 {/* <Image src="/Media/hero.png" alt="hero" layout="fill" objectFit="cover" priority /> */}
             </div>
             <div className="container" style={{ height: '100%' }}>
