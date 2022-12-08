@@ -63,7 +63,7 @@
         }
 
         &:focus {
-            box-shadow: 0 0 0 0.125em rgba($cyan, 0.5) !important;
+            box-shadow: none !important;
             color: white !important;
         }
     }

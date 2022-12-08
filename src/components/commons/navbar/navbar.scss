@@ -36,6 +36,10 @@ $ww: $lgrey;
             position: relative;
             font-weight: 500;
 
+            &.is-active {
+                font-weight: 700;
+            }
+
             &.is-active,
             &:hover {
                 background-color: transparent;
@@ -43,6 +47,7 @@ $ww: $lgrey;
                 span {
                     position: relative;
                     color: var(--text-color-hover);
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -144,11 +149,11 @@ $ww: $lgrey;
 @media screen and (min-width: 1025px) {
     .custom-navbar {
         .container {
-            display: flex;
-            > div {
-                width: 33.33% !important;
-                flex-basis: 33.33% !important;
-            }
+            // display: flex;
+            // > div {
+            //     width: 33.33% !important;
+            //     flex-basis: 33.33% !important;
+            // }
 
             .navbar-menu {
                 display: flex;
@@ -157,7 +162,14 @@ $ww: $lgrey;
                     column-gap: 1rem;
                     margin: 0;
                     width: 100%;
-                    justify-content: center !important;
+                    // justify-content: center !important;
+
+                    .navbar-item {
+                        span {
+                            position: relative;
+                            top: 7px;
+                        }
+                    }
                 }
             }
         }

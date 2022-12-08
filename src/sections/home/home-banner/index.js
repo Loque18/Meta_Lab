@@ -1,15 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import Image from 'next/image';
 
 import styles from './style.module.scss';
 
-const { bg, column, bgContainer } = styles;
+const { bg, column, bgContainer, pTitle } = styles;
 
 const HomeBanner = () => {
+    const onLoadOrCached = () => {};
+
     return (
         <section className={bg}>
             <div className={bgContainer}>
-                <Image src="/Media/hero.webp" alt="hero" layout="fill" objectFit="cover" priority />
+                <img src="/Media/hero.png" alt="hero" onLoad={onLoadOrCached} />
             </div>
             <div className="container" style={{ height: '100%' }}>
                 <div className="columns is-vcentered is-marginless" style={{ height: '100%' }}>
@@ -18,7 +20,7 @@ const HomeBanner = () => {
                             METALAB, YOUR <br />
                             <span className="has-text-cyan ignore-font">GATEWAY TO WEB3</span>
                         </h1>
-                        <p className="has-text-lgrey has-text-justified has-text-centered-mobile">
+                        <p className={`has-text-lgrey has-text-justified has-text-centered-mobile ${pTitle}`}>
                             Whether you are a corporation looking to get noticed as a market leader, a business
                             searching for innovative ways to raise funds to expand your brand without losing equity or
                             simply an individual with aspirations in the NFT space, Metalab brings the newest Blockchain

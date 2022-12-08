@@ -11,7 +11,7 @@ const ServicesBanner = () => {
             <div className="container px-2" style={{ height: '100%' }}>
                 <div className="columns is-vcentered" style={{ height: '100%' }}>
                     <div className="column is-7">
-                        <h1 className="title is-big has-text-blue  mb-3 has-text-centered-mobile ignore-font">
+                        <h1 className="title is-big has-text-blue  mb-3 has-text-centered-mobile ignore-font is-uppercase">
                             We’ve got your back!
                         </h1>
                         <p className="has-text-blue is-size-4 has-text-centered-mobile" style={{ fontWeight: '500' }}>

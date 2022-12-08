@@ -9,6 +9,10 @@ import HomeBanner2 from 'src/sections/home/home-banner-2';
 import HomeOurServices from 'src/sections/home/our-services';
 import HomePartners from 'src/sections/home/our-partners';
 
+import styles from './home.module.scss';
+
+const { blank_mask } = styles;
+
 const Home = () => {
     useEffect(() => {
         const { body } = document;
@@ -20,9 +24,12 @@ const Home = () => {
         };
     }, []);
 
+    const onImgLoad = () => {};
+
     return (
         <div>
-            <HomeBanner />
+            <div className={blank_mask} />
+            <HomeBanner onImgLoad={onImgLoad} />
             <TeamExperienceComponent />
             <HomeBanner2 />
             <HomeOurServices />

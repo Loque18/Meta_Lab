@@ -44,9 +44,7 @@ const HomeOurServices = () => {
 
                         <Link href={`/services#${item.divId}`} passHref>
                             <a className="has-text-white" href="r">
-                                <span className="icon ">
-                                    <i className="fas fa-arrow-right" />
-                                </span>
+                                <u>read more</u>
                             </a>
                         </Link>
                     </div>

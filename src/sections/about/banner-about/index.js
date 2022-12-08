@@ -12,8 +12,9 @@ const BannerAbout = () => {
                         <h1 className="title is-big has-text-blue has-font-airborne  has-text-centered-mobile ignore-font is-uppercase">
                             Metalab&apos;s unique approach to web3
                         </h1>
-                        <h1 className="subtitle is-3 has-text-weight-bold has-text-cyan has-font-airborne has-text-centered-mobile ignore-font">
-                            It&apos;s not about web3, it&apos;s about <span className=" ignore-font"> YOU</span>
+                        <h1 className="subtitle is-3 has-text-weight-bold has-text-blue has-font-airborne has-text-centered-mobile ignore-font">
+                            It&apos;s not about web3,
+                            <span className="has-text-cyan is-uppercase"> it&apos;s about YOU</span>
                         </h1>
 
                         <br />

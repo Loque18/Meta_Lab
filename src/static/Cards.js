@@ -3,7 +3,7 @@ const Cards = [
         id: 1,
         img: '/Media/icons/icons-01.webp',
         hoverImg: '/Media/icons/icons-06.webp',
-        title: 'An Enhanced Customer Experience',
+        title: 'Enhance your customer experience',
         cardDescription:
             'Create distinctive customer experiences to demonstrate to your customers that there is more to your brand than meets the eye. It’s about the experience, not the transaction.',
     },
@@ -11,7 +11,7 @@ const Cards = [
         id: 2,
         img: '/Media/icons/icons-04.webp',
         hoverImg: '/Media/icons/icons-09.webp',
-        title: 'Raising funds via brand identity',
+        title: 'Raise funds via brand identity',
         cardDescription: () => (
             <p className="has-text-centered">
                 Assets as unique as your brand. <br />
