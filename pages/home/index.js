@@ -24,9 +24,7 @@ const Home = () => {
         };
     }, []);
 
-    const onImgLoad = () => {
-        console.log('onImgLoad');
-    };
+    const onImgLoad = () => {};
 
     return (
         <div>

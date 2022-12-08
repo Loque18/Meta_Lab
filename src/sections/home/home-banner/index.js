@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 
 import styles from './style.module.scss';
@@ -5,9 +6,7 @@ import styles from './style.module.scss';
 const { bg, column, bgContainer } = styles;
 
 const HomeBanner = () => {
-    const onLoadOrCached = () => {
-        console.log('onLoadOrCached');
-    };
+    const onLoadOrCached = () => {};
 
     return (
         <section className={bg}>
