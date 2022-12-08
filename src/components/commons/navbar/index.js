@@ -67,7 +67,7 @@ const Navbar = () => {
     return (
         <nav
             className={`navbar custom-navbar is-fixed-top ${bgColor ? 'dark has-bg-blur-1' : 'light'} ${
-                !bgColor && router.pathname ? 'home' : ''
+                !bgColor && (router.pathname === '/home' || router.pathname === '/contact') ? 'home' : ''
             }`}
             role="navigation"
             aria-label="main navigation"
@@ -76,13 +76,30 @@ const Navbar = () => {
                 <div href="https://www.orcania.io" className="navbar-brand  ">
                     <Link href="/home" passHref>
                         <a className="navbar-item" onClick={closeMobileMenu}>
-                            <img src="/Media/Logo-white.png" alt="Metalab Logo" />
+                            <img
+                                src={
+                                    bgColor ||
+                                    mobileActive ||
+                                    (!bgColor && router.pathname === '/home') ||
+                                    (!bgColor && router.pathname === '/contact')
+                                        ? '/Media/Logo-white.png'
+                                        : '/Media/Logo-black.png'
+                                }
+                                alt="Metalab Logo"
+                            />
                         </a>
                     </Link>
 
                     <a
                         role="button"
-                        className={`navbar-burger  ${mobileActive ? ' is-active ' : ' '} has-text-white`}
+                        className={`navbar-burger  ${mobileActive ? ' is-active ' : ' '} ${
+                            bgColor ||
+                            mobileActive ||
+                            (!bgColor && router.pathname === '/home') ||
+                            (!bgColor && router.pathname === '/contact')
+                                ? 'has-text-white'
+                                : 'has-text-blue'
+                        }`}
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample"
@@ -98,7 +115,7 @@ const Navbar = () => {
                     <div className="navbar-start">
                         <Link href="/about" passHref>
                             <a
-                                className={`navbar-item  ${router.pathname === '/about' ? 'is-active ' : ''}`}
+                                className={`navbar-item ${router.pathname === '/about' ? 'is-active ' : ''}`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>About</span>
@@ -106,7 +123,7 @@ const Navbar = () => {
                         </Link>
                         <Link href="/services" passHref>
                             <a
-                                className={`navbar-item  ${router.pathname === '/services' ? 'is-active' : ''}`}
+                                className={`navbar-item ${router.pathname === '/services' ? 'is-active' : ''}`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>Services</span>
@@ -114,7 +131,7 @@ const Navbar = () => {
                         </Link>
                         <Link href="/contact" passHref>
                             <a
-                                className={`navbar-item  ${router.pathname === '/contact' ? 'is-active' : ''}`}
+                                className={`navbar-item ${router.pathname === '/contact' ? 'is-active' : ''}`}
                                 onClick={closeMobileMenu}
                             >
                                 <span>Contact us</span>

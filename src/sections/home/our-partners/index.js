@@ -15,6 +15,10 @@ const elements = [
         id: 2,
         img: '/Media/orcania.webp',
     },
+    {
+        id: 3,
+        img: '/Media/ard.jpg',
+    },
 ];
 
 const HomePartners = () => {

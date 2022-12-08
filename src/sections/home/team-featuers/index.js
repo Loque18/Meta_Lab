@@ -8,7 +8,15 @@ const { root, container, item, img1, img2, pp } = styles;
 const TeamExperienceComponent = () => {
     return (
         <section className={root}>
-            <div className="container px-5 " style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
+            <div className="container px-5 flex flex-column py-6" style={{ height: '100%' }}>
+                <h1 className="title is-1 has-text- has-text-blue mb-0 py-3">
+                    <span className="ignore-font">
+                        Surpass the competition by distinguishing <br /> your brand via NFT technology
+                    </span>
+                </h1>
+                <br />
+                <br />
+                <br />
                 <div className={container}>
                     {/* <div className={`box has-border-radius-20 ${item} m-0`}>
                         <div className="flex justify-content-center">
