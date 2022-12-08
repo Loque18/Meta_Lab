@@ -36,6 +36,10 @@ $ww: $lgrey;
             position: relative;
             font-weight: 500;
 
+            &.is-active {
+                font-weight: 700;
+            }
+
             &.is-active,
             &:hover {
                 background-color: transparent;
@@ -43,6 +47,7 @@ $ww: $lgrey;
                 span {
                     position: relative;
                     color: var(--text-color-hover);
+
                     &::after {
                         content: '';
                         position: absolute;
