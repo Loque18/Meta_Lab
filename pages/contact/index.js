@@ -277,7 +277,7 @@ const ContactUs = () => {
                         <span className="icon">
                             <i className="far fa-envelope" />
                         </span>
-                        info@metalab.business
+                        contactus@metalab.business
                     </h3>
                     <h3 className="has-text-lgrey">
                         <span className="icon">
