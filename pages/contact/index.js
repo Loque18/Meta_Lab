@@ -124,7 +124,7 @@ const ContactUs = () => {
                                                             value={formik.values.name}
                                                             onChange={formik.handleChange}
                                                         />
-                                                        <label htmlFor="name">Name</label>
+                                                        <label htmlFor="name">Name *</label>
                                                         {formik.touched.name && formik.errors.name ? (
                                                             <small id="username2-help" className="p-error">
                                                                 {formik.errors.name}
@@ -146,7 +146,7 @@ const ContactUs = () => {
                                                             value={formik.values.email}
                                                             onChange={formik.handleChange}
                                                         />
-                                                        <label htmlFor="email">Email</label>
+                                                        <label htmlFor="email">Email *</label>
                                                         {formik.touched.email && formik.errors.email ? (
                                                             <small id="username2-help" className="p-error">
                                                                 {formik.errors.email}
@@ -170,7 +170,7 @@ const ContactUs = () => {
                                                             value={formik.values.phone}
                                                             onChange={formik.handleChange}
                                                         />
-                                                        <label htmlFor="phone">Phone</label>
+                                                        <label htmlFor="phone">Phone *</label>
                                                         {formik.touched.phone && formik.errors.phone ? (
                                                             <small id="username2-help" className="p-error">
                                                                 {formik.errors.phone}
